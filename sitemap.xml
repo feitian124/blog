@@ -1,11 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://feitian124.github.com/blog/2012/02/hello.html</loc>
+        <lastmod>2012-07-04T21:49:10+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://feitian124.github.com/blog/2012/03/rails-guidexue-xi-bi-ji-1.html</loc>
+        <lastmod>2012-07-04T21:49:10+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://feitian124.github.com/blog/2012/06/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html
+        </loc>
+        <lastmod>2012-07-04T21:49:10+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://feitian124.github.com/blog/2012/06/mian-liao-ji-jia-gong-si.html</loc>
+        <lastmod>2012-07-04T21:49:10+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://feitian124.github.com/about/</loc>
+        <lastmod>2012-07-04T21:45:58+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://feitian124.github.com/blog/archives/</loc>
-        <lastmod>2012-07-04T21:12:23+08:00</lastmod>
+        <lastmod>2012-07-04T21:49:10+08:00</lastmod>
     </url>
     <url>
         <loc>http://feitian124.github.com/</loc>
-        <lastmod>2012-07-04T21:12:23+08:00</lastmod>
+        <lastmod>2012-07-04T21:49:10+08:00</lastmod>
     </url>
 </urlset>

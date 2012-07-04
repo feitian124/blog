@@ -5,15 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Ming</title>
+  <title>node.js底层是基于什么原理 - Ming</title>
   <meta name="author" content="ming">
 
   
-  <meta name="description" content="Blog Archive 2012 面了几家公司
-Jun 28 2012 node.js底层是基于什么原理
-Jun 28 2012 rails guide学习笔记1
-Mar 03 2012 Hello World
-Feb 25 2012 Recent Posts 面了几家公司 node. &hellip;">
+  <meta name="description" content="今天在社区里面闲逛，发现node.js很火。之前也零零星星的看过一些node.js的介绍，知道它底层是google v8引擎的 基于事件模型的服务器软件。但脑子有几个why一直挥之不去： 1.基于事件模型的理论并不新鲜，为什么没有在其他语言中实现。可能的原因是， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +18,7 @@ Feb 25 2012 Recent Posts 面了几家公司 node. &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://feitian124.github.com/blog/archives/index.html">
+  <link rel="canonical" href="http://feitian124.github.com/blog/2012/06/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,62 +64,95 @@ Feb 25 2012 Recent Posts 面了几家公司 node. &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">node.js底层是基于什么原理</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-28T22:44:00+08:00" pubdate data-updated="true">Jun 28<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>今天在社区里面闲逛，发现node.js很火。之前也零零星星的看过一些node.js的介绍，知道它底层是google v8引擎的 基于事件模型的服务器软件。但脑子有几个why一直挥之不去：</p>
 
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/2012/06/mian-liao-ji-jia-gong-si.html">面了几家公司</a></h1>
-<time datetime="2012-06-28T22:45:00+08:00" pubdate><span class='month'>Jun</span> <span class='day'>28</span> <span class='year'>2012</span></time>
+<!-- more -->
 
 
-</article>
+<p> 1.基于事件模型的理论并不新鲜，为什么没有在其他语言中实现。可能的原因是，其他语言都没有基于基于事件模型的概念或者习惯， 而在浏览器里运行的js则处处都是事件，onclick，onmouseover等等。
+ 2.在不是基于事件的http请求中，客户端和服务器建立tcp连接（http都是基于tcp吧），直到响应完毕，断掉tcp连接。 而现在node.js中在收到请求后，通知客户端断掉tcp连接，并说我之后会把找到的东西发给你。问题来了：服务器端是 怎么找到客户器端的呢？我们知道客户端去找服务器端是花了不少力气的，先dns，再ip；现在tcp断了，我不知道有什么机制 能让服务器找到客户端？难道node.js不是用在这样的场景么？</p>
 
-
-
-<article>
-  
-<h1><a href="/blog/2012/06/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html">node.js底层是基于什么原理</a></h1>
-<time datetime="2012-06-28T22:44:00+08:00" pubdate><span class='month'>Jun</span> <span class='day'>28</span> <span class='year'>2012</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/03/rails-guidexue-xi-bi-ji-1.html">rails guide学习笔记1</a></h1>
-<time datetime="2012-03-03T23:55:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>03</span> <span class='year'>2012</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/02/hello.html">Hello World</a></h1>
-<time datetime="2012-02-25T16:48:00+08:00" pubdate><span class='month'>Feb</span> <span class='day'>25</span> <span class='year'>2012</span></time>
-
-
-</article>
-
+<p>好吧，精力有限，还来不及去研究这个问题的答案。哪位同学了解的话，解答一下吧。纯属解惑。</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">ming</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-28T22:44:00+08:00" pubdate data-updated="true">Jun 28<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://feitian124.github.com/blog/2012/06/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html" data-via="" data-counturl="http://feitian124.github.com/blog/2012/06/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/rails-guidexue-xi-bi-ji-1.html" title="Previous Post: rails guide学习笔记1">&laquo; rails guide学习笔记1</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/06/mian-liao-ji-jia-gong-si.html" title="Next Post: 面了几家公司">面了几家公司 &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -175,7 +204,10 @@ Feb 25 2012 Recent Posts 面了几家公司 node. &hellip;">
       var disqus_shortname = 'mingblog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://feitian124.github.com/blog/2012/06/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html';
+        var disqus_url = 'http://feitian124.github.com/blog/2012/06/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
