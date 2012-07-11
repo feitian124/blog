@@ -5,13 +5,21 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>rails guide学习笔记1 - Ming</title>
+  <title>my first gem - Ming</title>
   <meta name="author" content="ming">
 
   
-  <meta name="description" content="学习rails也有2，3个星期了。虽然有javaEE的使用经验，也较系统的提前学习了ruby，
-不得不说学习起来还是有不少的难度。简单来说，ruby on raisl就相当于java中的
-struts＋spring＋habinate，再加一个非常方便的代码生成工具。 同时， &hellip;">
+  <meta name="description" content="学了大半年的rails，却还没写过自己到gem，我这个吉他新手，还老需要去翻教材，找一些和弦是如何按的，
+于是我决定写一个简单的gem，用来查找这些和弦。思路： 将常用和弦以yaml的形式存到文件中
+设计一个简单的和弦类，它的to_s方法显示改和弦，像这样 1
+2
+3
+4
+5
+6
+7
+am
+|-- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +28,7 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。 �
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://feitian124.github.com/blog/2012/03/rails-guidexue-xi-bi-ji-1.html">
+  <link rel="canonical" href="http://feitian124.github.com/blog/2012/07/my-first-gem.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -82,7 +90,7 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。 �
   
   <header>
     
-      <h1 class="entry-title">Rails Guide学习笔记1</h1>
+      <h1 class="entry-title">My First Gem</h1>
     
     
       <p class="meta">
@@ -98,7 +106,7 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。 �
   
 
 
-<time datetime="2012-03-03T23:55:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
+<time datetime="2012-07-11T23:11:00+08:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -107,24 +115,89 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。 �
   </header>
 
 
-<div class="entry-content"><p>学习rails也有2，3个星期了。虽然有javaEE的使用经验，也较系统的提前学习了ruby，
-不得不说学习起来还是有不少的难度。简单来说，ruby on raisl就相当于java中的
-struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p>
+<div class="entry-content"><p>学了大半年的rails，却还没写过自己到gem，我这个吉他新手，还老需要去翻教材，找一些和弦是如何按的，
+于是我决定写一个简单的gem，用来查找这些和弦。思路：</p>
 
 <!-- more -->
 
 
-<p>同时，也建议初学者直接从RailsGuides官方文档作为学习的第一站，因为这里有对rails
-方方面面的介绍，从怎么做到为什么这么做。以我为例，我学的第一本教材是那本著名的
-《用rails进行敏捷开发》第4版（Agile Web Development），但由于没有一点概念，书中
-说用rails new，generate，scaffold等时不知道他是想干什么，为什么他要这么做，只能跟
-着书一步一步作，学习效果并不理想, 所有我只有fall back来看官方文档。也见解印证了我
-的那个观点：官方文档永远是值得考虑认真学习的文档。</p>
+<ol>
+<li>将常用和弦以yaml的形式存到文件中</li>
+<li>设计一个简单的和弦类，它的<code>to_s</code>方法显示改和弦，像这样</li>
+</ol>
 
-<p>今天基本看完教材上model的部分,终于也能在学习中体验到爽的感觉。聪明的migrations,
-聪明的验证和回调，聪明的实体关联，聪明的查询接口。ror的开发理念让很多东西都聪明起来，
-当然，里面也有很多你一不注意就会犯错的小陷阱。比如哪些方法会触发回调，低性能的N＋1查
-询问题等。我要在理解的基础上记忆的同时，增加实战经验。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>am
+</span><span class='line'>|--0--|-----|-----|-----|-----|
+</span><span class='line'>|-----|--1--|-----|-----|-----|
+</span><span class='line'>|-----|-----|--3--|-----|-----|
+</span><span class='line'>|-----|-----|--2--|-----|-----|
+</span><span class='line'>|--0--|-----|-----|-----|-----|
+</span><span class='line'>|--0--|-----|-----|-----|-----|
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>用rake显示多个和指定和弦</li>
+</ol>
+
+
+<p>我们可以用bundle来新建一个gem，他会替我们生成一个骨架<code>bundle gem guitar_chords</code>.<br/>
+我的gem是下面这个样子</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ tree
+</span><span class='line'>.
+</span><span class='line'>├── Gemfile
+</span><span class='line'>├── Gemfile.lock
+</span><span class='line'>├── guitar_chords.gemspec
+</span><span class='line'>├── lib
+</span><span class='line'>│   ├── guitar_chords
+</span><span class='line'>│   │   ├── guitar_chord.rb
+</span><span class='line'>│   │   ├── guitar_chords.yml
+</span><span class='line'>│   │   └── version.rb
+</span><span class='line'>│   └── guitar_chords.rb
+</span><span class='line'>├── LICENSE
+</span><span class='line'>├── Rakefile
+</span><span class='line'>├── README.md
+</span><span class='line'>└── spec
+</span><span class='line'>    ├── guitar_chords_spec.rb
+</span><span class='line'>    └── spec_helper.rb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我尝试用SPEC进行TDD，虽然才写了几个test case，却也能在重构时帮我快速找出不少问题。<br/>
+配置spec时，碰到一些依赖方面的问题，对于module，require之后才能include。然后路径
+的问题，特别是相对路径，如果你在<code>guitar_chord.rb</code>中写<code>guitar_chords/guitar_chords.yml</code>的
+话，不一定能找到，因为当前目录是你调用<code>spec</code>时所在的目录，并不是<code>guitar_chord.rb</code>的目录。
+然后慢慢去翻书，找别人的代码参考，终于实现了个大概。</p>
+
+<p>TODO：<br/>
+ 1. rake部分<br/>
+ 2. 用单例模式，在第一次加载<code>guitar_chords.rb</code>时load所有的和弦对象。<br/>
+你可以查看源码，见<a href="https://github.com/feitian124/guitar_chords">这里</a></p>
 </div>
 
 
@@ -147,7 +220,7 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p
   
 
 
-<time datetime="2012-03-03T23:55:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
+<time datetime="2012-07-11T23:11:00+08:00" pubdate data-updated="true">Jul 11<span>th</span>, 2012</time>
       
 
 
@@ -155,7 +228,7 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://feitian124.github.com/blog/2012/03/rails-guidexue-xi-bi-ji-1.html" data-via="" data-counturl="http://feitian124.github.com/blog/2012/03/rails-guidexue-xi-bi-ji-1.html" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://feitian124.github.com/blog/2012/07/my-first-gem.html" data-via="" data-counturl="http://feitian124.github.com/blog/2012/07/my-first-gem.html" >Tweet</a>
   
   
   
@@ -164,10 +237,8 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/02/hello.html" title="Previous Post: Hello World">&laquo; Hello World</a>
+        <a class="basic-alignment left" href="/blog/2012/06/mian-liao-ji-jia-gong-si.html" title="Previous Post: 面了几家公司">&laquo; 面了几家公司</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/06/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html" title="Next Post: node.js底层是基于什么原理">node.js底层是基于什么原理 &raquo;</a>
       
     </p>
   </footer>
@@ -263,8 +334,8 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://feitian124.github.com/blog/2012/03/rails-guidexue-xi-bi-ji-1.html';
-        var disqus_url = 'http://feitian124.github.com/blog/2012/03/rails-guidexue-xi-bi-ji-1.html';
+        var disqus_identifier = 'http://feitian124.github.com/blog/2012/07/my-first-gem.html';
+        var disqus_url = 'http://feitian124.github.com/blog/2012/07/my-first-gem.html';
         var disqus_script = 'embed.js';
       
     (function () {

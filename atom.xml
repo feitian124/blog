@@ -4,7 +4,7 @@
   <title><![CDATA[Ming]]></title>
   <link href="http://feitian124.github.com/atom.xml" rel="self"/>
   <link href="http://feitian124.github.com/"/>
-  <updated>2012-07-04T23:04:20+08:00</updated>
+  <updated>2012-07-11T23:59:05+08:00</updated>
   <id>http://feitian124.github.com/</id>
   <author>
     <name><![CDATA[ming]]></name>
@@ -12,6 +12,97 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[my first gem]]></title>
+    <link href="http://feitian124.github.com/blog/2012/07/my-first-gem.html"/>
+    <updated>2012-07-11T23:11:00+08:00</updated>
+    <id>http://feitian124.github.com/blog/2012/07/my-first-gem</id>
+    <content type="html"><![CDATA[<p>学了大半年的rails，却还没写过自己到gem，我这个吉他新手，还老需要去翻教材，找一些和弦是如何按的，
+于是我决定写一个简单的gem，用来查找这些和弦。思路：</p>
+
+<!-- more -->
+
+
+<ol>
+<li>将常用和弦以yaml的形式存到文件中</li>
+<li>设计一个简单的和弦类，它的<code>to_s</code>方法显示改和弦，像这样</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>am
+</span><span class='line'>|--0--|-----|-----|-----|-----|
+</span><span class='line'>|-----|--1--|-----|-----|-----|
+</span><span class='line'>|-----|-----|--3--|-----|-----|
+</span><span class='line'>|-----|-----|--2--|-----|-----|
+</span><span class='line'>|--0--|-----|-----|-----|-----|
+</span><span class='line'>|--0--|-----|-----|-----|-----|
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>用rake显示多个和指定和弦</li>
+</ol>
+
+
+<p>我们可以用bundle来新建一个gem，他会替我们生成一个骨架<code>bundle gem guitar_chords</code>.<br/>
+我的gem是下面这个样子</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ tree
+</span><span class='line'>.
+</span><span class='line'>├── Gemfile
+</span><span class='line'>├── Gemfile.lock
+</span><span class='line'>├── guitar_chords.gemspec
+</span><span class='line'>├── lib
+</span><span class='line'>│   ├── guitar_chords
+</span><span class='line'>│   │   ├── guitar_chord.rb
+</span><span class='line'>│   │   ├── guitar_chords.yml
+</span><span class='line'>│   │   └── version.rb
+</span><span class='line'>│   └── guitar_chords.rb
+</span><span class='line'>├── LICENSE
+</span><span class='line'>├── Rakefile
+</span><span class='line'>├── README.md
+</span><span class='line'>└── spec
+</span><span class='line'>    ├── guitar_chords_spec.rb
+</span><span class='line'>    └── spec_helper.rb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我尝试用SPEC进行TDD，虽然才写了几个test case，却也能在重构时帮我快速找出不少问题。<br/>
+配置spec时，碰到一些依赖方面的问题，对于module，require之后才能include。然后路径
+的问题，特别是相对路径，如果你在<code>guitar_chord.rb</code>中写<code>guitar_chords/guitar_chords.yml</code>的
+话，不一定能找到，因为当前目录是你调用<code>spec</code>时所在的目录，并不是<code>guitar_chord.rb</code>的目录。
+然后慢慢去翻书，找别人的代码参考，终于实现了个大概。</p>
+
+<p>TODO：<br/>
+ 1. rake部分<br/>
+ 2. 用单例模式，在第一次加载<code>guitar_chords.rb</code>时load所有的和弦对象。<br/>
+你可以查看源码，见<a href="https://github.com/feitian124/guitar_chords">这里</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[面了几家公司]]></title>
