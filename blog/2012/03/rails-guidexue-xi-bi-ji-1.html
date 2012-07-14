@@ -31,6 +31,9 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。 �
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+<link rel="stylesheet" href="/stylesheets/bootstrap.min.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/public/css/syntax.css" type="text/css" media="screen" />
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -48,11 +51,11 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。 �
 </head>
 
 <body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Ming</a></h1>
-  
-    <h2>will be better</h2>
-  
+  <header role="banner" class="header1"><hgroup>
+<h1><a href="/">Ming</a></h1>
+
+<h2>will be better</h2>
+
 </hgroup>
 
 </header>
@@ -70,8 +73,8 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。 �
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
-  <li><a href="/about/">About</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about/">About</a></li>
 </ul>
 
 </nav>
@@ -99,8 +102,6 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。 �
 
 
 <time datetime="2012-03-03T23:55:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
-        
-         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
@@ -150,12 +151,16 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p
 <time datetime="2012-03-03T23:55:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
       
 
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
 
     </p>
     
       <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://feitian124.github.com/blog/2012/03/rails-guidexue-xi-bi-ji-1.html" data-via="" data-counturl="http://feitian124.github.com/blog/2012/03/rails-guidexue-xi-bi-ji-1.html" >Tweet</a>
   
   
   
@@ -184,8 +189,32 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p
 <aside class="sidebar">
   
     <section>
+<h2> 关于我 </h2>
+<img class="center" src="http://www.gravatar.com/avatar/c57225b6048481bc0dcd4e388dfcc99c?s=150" title="me" >
+<p>
+伪软件架构师，真开源爱好者，不靠谱的经济观察员, IT文艺青年, 未来足球之星。心仍有大志, 资浅创业爱好者。
+</p>
+<!-- JiaThis Button BEGIN -->
+<div id="jiathis_style_32x32">
+  <span class="jiathis_txt">follow me:</span> 
+  <a class="jiathis_follow_tsina" rel="http://weibo.com/feitian124"></a>
+  <a class="jiathis_follow_tqq" rel="http://t.qq.com/feitian124"></a>
+</div>
+<script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+<br />
+</section>
+<section>
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href='/blog/categories/linux'>linux (1)</a></li><li><a href='/blog/categories/ruby'>ruby (2)</a></li></ul>
+</section>
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/07/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html">ubuntu 12.04 创建启动器</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/07/my-first-gem.html">my first gem</a>
@@ -203,46 +232,8 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p
         <a href="/blog/2012/03/rails-guidexue-xi-bi-ji-1.html">rails guide学习笔记1</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2012/02/hello.html">Hello World</a>
-      </li>
-    
   </ul>
 </section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/feitian124">@feitian124</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'feitian124',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-
-
 
   
 </aside>
@@ -280,18 +271,12 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p
 
 
 
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
-
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript">var jiathis_config = {data_track_clickback:true};</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0&amp;uid=1341022378947764" charset="utf-8"></script>
+<!-- JiaThis Button END -->
 
 
 </body>

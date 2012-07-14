@@ -4,7 +4,7 @@
   <title><![CDATA[Ming]]></title>
   <link href="http://feitian124.github.com/atom.xml" rel="self"/>
   <link href="http://feitian124.github.com/"/>
-  <updated>2012-07-11T23:59:05+08:00</updated>
+  <updated>2012-07-14T21:50:02+08:00</updated>
   <id>http://feitian124.github.com/</id>
   <author>
     <name><![CDATA[ming]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ubuntu 12.04 创建启动器]]></title>
+    <link href="http://feitian124.github.com/blog/2012/07/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html"/>
+    <updated>2012-07-14T01:03:00+08:00</updated>
+    <id>http://feitian124.github.com/blog/2012/07/ubuntu-12-dot-04-chuang-jian-qi-dong-qi</id>
+    <content type="html"><![CDATA[<p>最近又想折腾下android，所有在ubuntu下弄了下开发环境。
+值得一提的是，ubuntu下如果你要在命令行里能使用你的
+命令，你需要将可执行文件路径加进<code>$PATH</code>, 那如果你想在
+桌面启动一个应用程序，怎么办呢？</p>
+
+<!-- more -->
+
+
+<p>很简单，看我添加<code>eclipse</code>的例子：
+先添加一个文件<code>/usr/share/applications/eclipse.desktop</code>
+内容类似如下:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[Desktop Entry]
+</span><span class='line'>Version=1.0
+</span><span class='line'>Name=eclipse
+</span><span class='line'>Exec=/home/ming/applications/eclipse/eclipse
+</span><span class='line'>Terminal=false
+</span><span class='line'>Icon=/home/ming/applications/eclipse/icon.xpm
+</span><span class='line'>Type=Application
+</span><span class='line'>Categories=Development</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>my development enviroment</h2>
+
+<h2>java Develop Kit 1.7  </h2>
+
+<p>installed in <code>/usr/lib/jvm/jdk1.7.0_05</code>, configred in <code>.bashrc</code></p>
+
+<h2>eclipse 4.2 </h2>
+
+<p>installed in  <code>/home/ming/applications/eclipse</code>,
+added a luncher to <code>/usr/share/applications/eclipse.desktop</code></p>
+
+<h2>android SDK </h2>
+
+<p>/home/ming/applications</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[my first gem]]></title>
@@ -48,7 +100,7 @@
 
 
 <ol>
-<li>用rake显示多个和指定和弦</li>
+<li>用rake显示多个或指定和弦</li>
 </ol>
 
 
