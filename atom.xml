@@ -4,7 +4,7 @@
   <title><![CDATA[Ming]]></title>
   <link href="http://feitian124.github.com/atom.xml" rel="self"/>
   <link href="http://feitian124.github.com/"/>
-  <updated>2012-08-04T16:17:36+08:00</updated>
+  <updated>2012-08-04T16:55:33+08:00</updated>
   <id>http://feitian124.github.com/</id>
   <author>
     <name><![CDATA[ming]]></name>
@@ -28,8 +28,12 @@
 
 <p>然后看一下收费，基本都是这种存储 + 流量 分开付费的方式。</p>
 
-<p>然后我们看看一些云存储服务商。
-1. 先说互联网老大，google storage,支持1，2，3种访问方式，到2012年底前，以下免费：</p>
+<p>然后我们看看一些云存储服务商。</p>
+
+<ol>
+<li>先说互联网老大，google storage,支持1，2，3种访问方式，到2012年底前，以下免费：</li>
+</ol>
+
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
