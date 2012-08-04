@@ -5,11 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: linux - Ming</title>
+  <title>云存储 - Ming</title>
   <meta name="author" content="ming">
 
   
-  <meta name="description" content="Category: linux">
+  <meta name="description" content="写博客有时想放一些图片，就想到了云储存。平常也关注了下，但没认真考察过。
+首先说一下访问云的方式，从严格到开放的顺序： 1. 需要登录他们的网站或者客户端，才能使用。既没有任何API。
+2. 有特定API，且是需要验证。如php，ios等。
+3. 有通用API，如json，uri等， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://feitian124.github.comblog/categories/linux/index.html">
+  <link rel="canonical" href="http://feitian124.github.com/blog/2012/08/a-few-words-about-cloud-storage.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -79,36 +82,133 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Linux</h1>
+    
+      <h1 class="entry-title">云存储</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-04T15:33:00+08:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>写博客有时想放一些图片，就想到了云储存。平常也关注了下，但没认真考察过。
+首先说一下访问云的方式，从严格到开放的顺序：
+ <!-- more -->
+1. 需要登录他们的网站或者客户端，才能使用。既没有任何API。
+2. 有特定API，且是需要验证。如php，ios等。
+3. 有通用API，如json，uri等，但是会跳转到他们的网站。（外链 - Direct link:download)
+4. 通过url直接访问。（直链 - Direct link:streaming)</p>
 
-  
-  <h2>2012</h2>
+<p>然后看一下收费，基本都是这种存储 + 流量 分开付费的方式。</p>
 
-<article>
-  
-<h1><a href="/blog/2012/07/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html">ubuntu 12.04 创建启动器</a></h1>
-<time datetime="2012-07-14T01:03:00+08:00" pubdate><span class='month'>Jul</span> <span class='day'>14</span> <span class='year'>2012</span></time>
+<p>然后我们看看一些云存储服务商。
+1. 先说互联网老大，google storage,支持1，2，3种访问方式，到2012年底前，以下免费：</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/linux/'>linux</a></span>
-</footer>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>5 GB of storage
+</span><span class='line'>25 GB of download data (20 GB to Americas and EMEA*; 5 GB to Asia-Pacific)
+</span><span class='line'>25 GB of upload data (20 GB to Americas and EMEA*; 5 GB to Asia-Pacific)
+</span><span class='line'>30,000 GET, HEAD requests
+</span><span class='line'>3,000 PUT, POST, GET bucket, GET service requests</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<ol>
+<li><p>opendrive *
+5G的免费存储，支持1，2，3种访问方式，通过交换链接，可以支持第4种访问方式加少量流量。
+适合写博客的我。<a href="http://www.opendrive.com" title="OpenDrive - Online storage, backup and file management">OpenDrive</a></p></li>
+<li><p>华为dbank
+提供较高性价比的直链服务。0.48/g，比google和有拍都便宜。</p></li>
+<li><p>有拍
+支持1，2，3，4种访问方式，无免费配额。听说服务稳定，价格适中。</p></li>
+<li>盛大云
+支持1，2，无免费版，仿亚马逊的，现在提够很多云服务。</li>
+<li>金山快盘 *
+注册送5G，支持1，2，3种访问方式。免费使用。</li>
+<li>skydrive *
+之前是25G，现在注册只有5G了。支持1，2，3种访问方式。有免费配额。</li>
+<li>dropbox
+和skydrive类似。</li>
+<li>ubuntu one *
+我用ubuntu，所以也用上了这个。5G免费配额。</li>
+<li>amazon s3
+知道它是老大，可惜一直被墙，无缘使用。</li>
+</ol>
 
+
+<p>   *表示已经试用。</p>
+
+<hr />
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">ming</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-04T15:33:00+08:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/08/create-logo-with-inkscape.html" title="Previous Post: create logo with inkscape">&laquo; create logo with inkscape</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -180,7 +280,10 @@
       var disqus_shortname = 'mingblog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://feitian124.github.com/blog/2012/08/a-few-words-about-cloud-storage.html';
+        var disqus_url = 'http://feitian124.github.com/blog/2012/08/a-few-words-about-cloud-storage.html';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

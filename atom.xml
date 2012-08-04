@@ -4,7 +4,7 @@
   <title><![CDATA[Ming]]></title>
   <link href="http://feitian124.github.com/atom.xml" rel="self"/>
   <link href="http://feitian124.github.com/"/>
-  <updated>2012-07-18T00:03:07+08:00</updated>
+  <updated>2012-08-04T16:17:36+08:00</updated>
   <id>http://feitian124.github.com/</id>
   <author>
     <name><![CDATA[ming]]></name>
@@ -12,6 +12,92 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[云存储]]></title>
+    <link href="http://feitian124.github.com/blog/2012/08/a-few-words-about-cloud-storage.html"/>
+    <updated>2012-08-04T15:33:00+08:00</updated>
+    <id>http://feitian124.github.com/blog/2012/08/a-few-words-about-cloud-storage</id>
+    <content type="html"><![CDATA[<p>写博客有时想放一些图片，就想到了云储存。平常也关注了下，但没认真考察过。
+首先说一下访问云的方式，从严格到开放的顺序：
+ <!-- more -->
+1. 需要登录他们的网站或者客户端，才能使用。既没有任何API。
+2. 有特定API，且是需要验证。如php，ios等。
+3. 有通用API，如json，uri等，但是会跳转到他们的网站。（外链 - Direct link:download)
+4. 通过url直接访问。（直链 - Direct link:streaming)</p>
+
+<p>然后看一下收费，基本都是这种存储 + 流量 分开付费的方式。</p>
+
+<p>然后我们看看一些云存储服务商。
+1. 先说互联网老大，google storage,支持1，2，3种访问方式，到2012年底前，以下免费：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>5 GB of storage
+</span><span class='line'>25 GB of download data (20 GB to Americas and EMEA*; 5 GB to Asia-Pacific)
+</span><span class='line'>25 GB of upload data (20 GB to Americas and EMEA*; 5 GB to Asia-Pacific)
+</span><span class='line'>30,000 GET, HEAD requests
+</span><span class='line'>3,000 PUT, POST, GET bucket, GET service requests</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li><p>opendrive *
+5G的免费存储，支持1，2，3种访问方式，通过交换链接，可以支持第4种访问方式加少量流量。
+适合写博客的我。<a href="http://www.opendrive.com" title="OpenDrive - Online storage, backup and file management">OpenDrive</a></p></li>
+<li><p>华为dbank
+提供较高性价比的直链服务。0.48/g，比google和有拍都便宜。</p></li>
+<li><p>有拍
+支持1，2，3，4种访问方式，无免费配额。听说服务稳定，价格适中。</p></li>
+<li>盛大云
+支持1，2，无免费版，仿亚马逊的，现在提够很多云服务。</li>
+<li>金山快盘 *
+注册送5G，支持1，2，3种访问方式。免费使用。</li>
+<li>skydrive *
+之前是25G，现在注册只有5G了。支持1，2，3种访问方式。有免费配额。</li>
+<li>dropbox
+和skydrive类似。</li>
+<li>ubuntu one *
+我用ubuntu，所以也用上了这个。5G免费配额。</li>
+<li>amazon s3
+知道它是老大，可惜一直被墙，无缘使用。</li>
+</ol>
+
+
+<p>   *表示已经试用。</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[create logo with inkscape]]></title>
+    <link href="http://feitian124.github.com/blog/2012/08/create-logo-with-inkscape.html"/>
+    <updated>2012-08-04T12:25:00+08:00</updated>
+    <id>http://feitian124.github.com/blog/2012/08/create-logo-with-inkscape</id>
+    <content type="html"><![CDATA[<p>   最近想为我的域名www.yunnuy.com做一个小logo，于是到网上找了个画矢量图的工具。由于我用的unbutu，在软件中心
+矢量类排名第一的就是inkscape了，所以下载了下来，看了点资料，开始动手。
+ <!-- more -->
+   灵感来源与google play中的一些图标，总体思路是方块中放一些文字。</p>
+
+<p> 1.首先建立一个rectangle，调整他的fill(即中间填充部分)及stroke(即边框)。我调粗了stroke，并改为圆角。</p>
+
+<p> 2.文字部分我打算用一个灵动一些的Y加两个规矩的un，这样不至于单调。不用找艺术字，用brush工具，画出一个Y出来，我画了3笔(3个object)，这样有泼墨的感觉，然后group起来，变成一个object。</p>
+
+<p> 3.输入un，选择字体，字号和颜色。这时最大字体也达不到我的要求，我就把un做group操作，之后就可以像个普通对象那样缩放了。</p>
+
+<p> 4.将y un调整位置，并group。
+<img class="right" src="https://www.opendrive.com/files/OV8yMjAwMTIyX25OekJO/yunnuy.png" width="200" title="yunnuy" ></p>
+
+<p> 5.现在有2个object了，一个是框，另一个是3个字yun。我需要把3个字放进框里，我试验了之间拖进去，这样的效果好像是在框里面写两个字，颜色会改变。我想到了layer。我将字移动到另一个layer，然后移动到框中。最后group起来。</p>
+
+<p> 6.基本形态还不错，但是显得有点单调。再给它加个类似阴影的衬拖。类似第1步，建一个square，调整fill和stroke，然后放在layer2，并移到我图形的右下角落。</p>
+
+<p> 这样我的第一个log就建好了。学了2个小时左右吧，肯定不是最好的实现方式，但基本也满足我个性化logo的需求了。感谢开源，给我们带来这样便利的工具。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ubuntu 12.04 创建启动器]]></title>
@@ -233,7 +319,8 @@ struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p
     <link href="http://feitian124.github.com/blog/2012/02/hello.html"/>
     <updated>2012-02-25T16:48:00+08:00</updated>
     <id>http://feitian124.github.com/blog/2012/02/hello</id>
-    <content type="html"><![CDATA[<p>i want to have my own blog since long time ago, but all kinds of excuses stoped me.
+    <content type="html"><![CDATA[<p><img src="http://www.gravatar.com/avatar/883afb8542f7d4a6f8cf2345ec9586f8?s=120" title="&#34;yunnuy log&#34;" alt="&#34;yunnuy log&#34;">
+i want to have my own blog since long time ago, but all kinds of excuses stoped me.
 As i&#8217;m learning ruby on rails, i&#8217;m kind of repick the good habit of study and writing
 things down. It&#8217;s a good chance to start blog right here, right now.
 I would like to keep my decision here:</p>
