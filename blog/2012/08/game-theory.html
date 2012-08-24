@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World - Ming</title>
+  <title>Game theory - 博弈论 - Ming</title>
   <meta name="author" content="ming">
 
   
-  <meta name="description" content="i want to have my own blog since long time ago, but all kinds of excuses stoped me.
-As i&#8217;m learning ruby on rails, i&#8217;m kind of repick &hellip;">
+  <meta name="description" content="游戏中双方为了达到各自的目标和利益，各方必须考虑对手的各种可能的行动方案，并力图选取对自己最为有利或最为合理的方案。
+博弈论考虑游戏中的个体的预测行为和实际行为，并研究它们的优化策略。 非零和博弈 是一种非合作下的博弈，博弈中各方的收益或损失的总和不是零值，自己的所得并不与他人的所失的大小相等。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ As i&#8217;m learning ruby on rails, i&#8217;m kind of repick &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://feitian124.github.com/blog/2012/02/hello.html">
+  <link rel="canonical" href="http://feitian124.github.com/blog/2012/08/game-theory.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -84,7 +84,7 @@ As i&#8217;m learning ruby on rails, i&#8217;m kind of repick &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Hello World</h1>
+      <h1 class="entry-title">Game Theory - 博弈论</h1>
     
     
       <p class="meta">
@@ -100,29 +100,40 @@ As i&#8217;m learning ruby on rails, i&#8217;m kind of repick &hellip;">
   
 
 
-<time datetime="2012-02-25T16:48:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2012</time>
+<time datetime="2012-08-24T23:31:00+08:00" pubdate data-updated="true">Aug 24<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p><img src="http://www.gravatar.com/avatar/883afb8542f7d4a6f8cf2345ec9586f8?s=120" title="&#34;yunnuy log&#34;" alt="&#34;yunnuy log&#34;">
-i want to have my own blog since long time ago, but all kinds of excuses stoped me.
-As i&#8217;m learning ruby on rails, i&#8217;m kind of repick the good habit of study and writing
-things down. It&#8217;s a good chance to start blog right here, right now.
-I would like to keep my decision here:</p>
+<div class="entry-content"><p>游戏中双方为了达到各自的目标和利益，各方必须考虑对手的各种可能的行动方案，并力图选取对自己最为有利或最为合理的方案。
+博弈论考虑游戏中的个体的预测行为和实际行为，并研究它们的优化策略。
+ <!-- more --></p>
 
-<!-- more -->
+<h2>非零和博弈</h2>
 
+<p>是一种非合作下的博弈，博弈中各方的收益或损失的总和不是零值，自己的所得并不与他人的所失的大小相等。<strong>双方有合作的可能</strong>。</p>
 
-<ol>
-<li><p>each week post at least two posts, and at least one of them must be technical related
-in the next 6 month.</p></li>
-<li><p>each week recite at least one article from &#8220;new concept english&#8221;. this not only help
-me improve my english through good habit, but also help me reinforce the memory.</p></li>
-</ol>
+<h3>囚徒困境</h3>
 
+<p>是博弈论的非零和博弈中具代表性的例子，<strong>反映個人最佳選擇並非团体最佳選擇</strong></p>
+
+<blockquote><p>警方逮捕甲、乙两名嫌疑犯，但沒有足够证据指控二人有罪。於是警方分开囚禁嫌疑犯，分别和二人见面，并向雙方提供以下相同的选择：
+- 若一人認罪並作证检控對方（相關術語稱「背叛」對方），而對方保持沉默，此人将即時獲释，沉默者将判監10年。
+- 若二人都保持沉默（相關術語稱互相「合作」），则二人同樣判监半年。  <br/>
+- 若二人都互相检举（互相「背叛」），則二人同樣判監2年。
+試設想困境中兩名理性囚徒會如何作出選擇：  <br/>
+- 若對方沉默、我背叛會讓我獲釋，所以會選擇背叛。
+- 對方背叛指控我，我也要指控對方才能得到較低的刑期，所以也是會選擇背叛。</p></blockquote>
+
+<p>二人面對的情況一樣，所以二人的理性思考都会得出相同的结论——选择背叛。
+以全体利益而言，如果两个参与者都合作保持沉默，兩人都只會被判刑半年，总体利益更高，結果也比兩人背叛對方、判刑2年的情況較佳。</p>
+
+<h2>零和博弈</h2>
+
+<p>零和博弈(英语：Zero-Sum Game)又称零和游戏或零和賽局，与非零和博弈相对，是博弈论的一个概念，属非合作博弈，
+指参与博弈的各方，在严格竞争下，一方的收益必然意味着另一方的损失，博弈各方的收益和损失相加总和永远为“零”。<strong>双方不存在合作的可能</strong></p>
 </div>
 
 
@@ -145,8 +156,14 @@ me improve my english through good habit, but also help me reinforce the memory.
   
 
 
-<time datetime="2012-02-25T16:48:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2012</time>
+<time datetime="2012-08-24T23:31:00+08:00" pubdate data-updated="true">Aug 24<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/sciences/'>Sciences</a>, <a class='category' href='/blog/categories/social/'>Social</a>
+  
+</span>
 
 
     </p>
@@ -160,8 +177,8 @@ me improve my english through good habit, but also help me reinforce the memory.
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/08/big-data-and-cloud.html" title="Previous Post: big data and cloud">&laquo; big data and cloud</a>
       
-        <a class="basic-alignment right" href="/blog/2012/03/rails-guidexue-xi-bi-ji-1.html" title="Next Post: rails guide学习笔记1">rails guide学习笔记1 &raquo;</a>
       
     </p>
   </footer>
@@ -247,8 +264,8 @@ me improve my english through good habit, but also help me reinforce the memory.
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://feitian124.github.com/blog/2012/02/hello.html';
-        var disqus_url = 'http://feitian124.github.com/blog/2012/02/hello.html';
+        var disqus_identifier = 'http://feitian124.github.com/blog/2012/08/game-theory.html';
+        var disqus_url = 'http://feitian124.github.com/blog/2012/08/game-theory.html';
         var disqus_script = 'embed.js';
       
     (function () {

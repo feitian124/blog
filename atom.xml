@@ -4,7 +4,7 @@
   <title><![CDATA[Ming]]></title>
   <link href="http://feitian124.github.com/atom.xml" rel="self"/>
   <link href="http://feitian124.github.com/"/>
-  <updated>2012-08-23T23:59:51+08:00</updated>
+  <updated>2012-08-24T23:52:34+08:00</updated>
   <id>http://feitian124.github.com/</id>
   <author>
     <name><![CDATA[ming]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Game theory - 博弈论]]></title>
+    <link href="http://feitian124.github.com/blog/2012/08/game-theory.html"/>
+    <updated>2012-08-24T23:31:00+08:00</updated>
+    <id>http://feitian124.github.com/blog/2012/08/game-theory</id>
+    <content type="html"><![CDATA[<p>游戏中双方为了达到各自的目标和利益，各方必须考虑对手的各种可能的行动方案，并力图选取对自己最为有利或最为合理的方案。
+博弈论考虑游戏中的个体的预测行为和实际行为，并研究它们的优化策略。
+ <!-- more --></p>
+
+<h2>非零和博弈</h2>
+
+<p>是一种非合作下的博弈，博弈中各方的收益或损失的总和不是零值，自己的所得并不与他人的所失的大小相等。<strong>双方有合作的可能</strong>。</p>
+
+<h3>囚徒困境</h3>
+
+<p>是博弈论的非零和博弈中具代表性的例子，<strong>反映個人最佳選擇並非团体最佳選擇</strong></p>
+
+<blockquote><p>警方逮捕甲、乙两名嫌疑犯，但沒有足够证据指控二人有罪。於是警方分开囚禁嫌疑犯，分别和二人见面，并向雙方提供以下相同的选择：
+- 若一人認罪並作证检控對方（相關術語稱「背叛」對方），而對方保持沉默，此人将即時獲释，沉默者将判監10年。
+- 若二人都保持沉默（相關術語稱互相「合作」），则二人同樣判监半年。  <br/>
+- 若二人都互相检举（互相「背叛」），則二人同樣判監2年。
+試設想困境中兩名理性囚徒會如何作出選擇：  <br/>
+- 若對方沉默、我背叛會讓我獲釋，所以會選擇背叛。
+- 對方背叛指控我，我也要指控對方才能得到較低的刑期，所以也是會選擇背叛。</p></blockquote>
+
+<p>二人面對的情況一樣，所以二人的理性思考都会得出相同的结论——选择背叛。
+以全体利益而言，如果两个参与者都合作保持沉默，兩人都只會被判刑半年，总体利益更高，結果也比兩人背叛對方、判刑2年的情況較佳。</p>
+
+<h2>零和博弈</h2>
+
+<p>零和博弈(英语：Zero-Sum Game)又称零和游戏或零和賽局，与非零和博弈相对，是博弈论的一个概念，属非合作博弈，
+指参与博弈的各方，在严格竞争下，一方的收益必然意味着另一方的损失，博弈各方的收益和损失相加总和永远为“零”。<strong>双方不存在合作的可能</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[big data and cloud]]></title>
