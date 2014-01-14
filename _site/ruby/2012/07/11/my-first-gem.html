@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+         **
+         * Auther:      掌心
+         * Contact:     http://www.zhanxin.info
+         * Create:      2013.08.10
+         * Theme Name:  Kunka
+         * Authorize:   BY-NC-SA
+         **
+        -->
+        <meta charset="utf-8">
+        <title>my first gem - Ming's</title>
+        <!-- meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="generator" content="Jekyll" />
+        <meta name="author" content="ming" />
+        <meta name="description" content="code, dream, life and more.." />
+        <meta name="keywords" content="" />
+        <!-- atom -->
+        <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="http://localhost:4000/atom.xml" />
+        <link rel="shortcut icon" href="http://jekyllrb.com/favicon.png" type="image/x-icon" />
+        <!-- font-awesome -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+        <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+        
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        
+    </head>
+    <body>
+        <div class="head fn-clear">
+            <div class="header">
+                <h1 class="logo">
+                    <a href="http://localhost:4000"><i class="icon-anchor"></i></a>
+                </h1>
+                <nav class="nav">
+                    <ul>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/index.html">
+                                首页
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/categories.html">
+                                分类目录
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/archives.html">
+                                文章归档
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/contact.html">
+                                联系我
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/links.html">
+                                友情链接
+                            </a>
+                            
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <div class="follow">
+                    
+                    <a href="http://weibo.com/feitian124" target="_blank"><i class="icon-weibo"></i></a>
+                    
+                    <a href="http://github.com/feitian124" target="_blank"><i class="icon-github-alt"></i></a>
+                    
+                    <a href="http://twitter.com/feitian124" target="_blank"><i class="icon-twitter"></i></a>
+                    
+                    <a href="http://google.com/feitian124" target="_blank"><i class="icon-google-plus"></i></a>
+                    
+                    <a href="/atom.xml" target="_blank"><i class="icon-rss"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="contain fn-clear">
+            <div class="container fn-clear">
+                <div class="main">
+                    <div class="article article-post">
+    <h2 class="title">my first gem</h2>
+    <div class="info">
+        <span class="info-title"><i class="icon-calendar"></i> Published: </span>
+        <span class="info-date">11 Jul 2012</span>
+        <span class="info-title"><i class="icon-folder-open"></i> Category: </span>
+        <span class="info-link"><a href="http://localhost:4000/categories.html#-ref" ></a></span>
+    </div>
+    <p>学了大半年的rails，却还没写过自己到gem，我这个吉他新手，还老需要去翻教材，找一些和弦是如何按的，
+于是我决定写一个简单的gem，用来查找这些和弦。思路：  </p>
+
+<ol>
+<li> 将常用和弦以yaml的形式存到文件中<br></li>
+<li> 设计一个简单的和弦类，它的<code>to_s</code>方法显示改和弦，像这样
+```
+am
+|--0--|-----|-----|-----|-----|
+|-----|--1--|-----|-----|-----|
+|-----|-----|--3--|-----|-----|
+|-----|-----|--2--|-----|-----|
+|--0--|-----|-----|-----|-----|
+|--0--|-----|-----|-----|-----|</li>
+</ol>
+<div class="highlight"><pre><code class="text language-text" data-lang="text"> 3.  用rake显示多个或指定和弦
+
+我们可以用bundle来新建一个gem，他会替我们生成一个骨架`bundle gem guitar_chords`.  
+我的gem是下面这个样子
+</code></pre></div>
+<p>$ tree
+.
+├── Gemfile
+├── Gemfile.lock
+├── guitar<em>chords.gemspec
+├── lib
+│   ├── guitar</em>chords
+│   │   ├── guitar<em>chord.rb
+│   │   ├── guitar</em>chords.yml
+│   │   └── version.rb
+│   └── guitar<em>chords.rb
+├── LICENSE
+├── Rakefile
+├── README.md
+└── spec
+    ├── guitar</em>chords<em>spec.rb
+    └── spec</em>helper.rb
+``<code>
+我尝试用SPEC进行TDD，虽然才写了几个test case，却也能在重构时帮我快速找出不少问题。  
+配置spec时，碰到一些依赖方面的问题，对于module，require之后才能include。然后路径
+的问题，特别是相对路径，如果你在</code>guitar<em>chord.rb<code>中写</code>guitar</em>chords/guitar<em>chords.yml<code>的
+话，不一定能找到，因为当前目录是你调用</code>spec<code>时所在的目录，并不是</code>guitar</em>chord.rb`的目录。
+然后慢慢去翻书，找别人的代码参考，终于实现了个大概。</p>
+
+<p>TODO：<br>
+ 1. rake部分<br>
+ 2. 用单例模式，在第一次加载<code>guitar_chords.rb</code>时load所有的和弦对象。<br>
+你可以查看源码，见<a href="https://github.com/feitian124/guitar_chords">这里</a></p>
+
+    <nav class="article-previous fn-clear">
+        
+        <a class="prev" href="/life/2012/06/28/mian-liao-ji-jia-gong-si.html" rel="bookmark">&laquo;&nbsp;面了几家公司</a>
+        
+        
+        <a class="next" href="/linux/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html" rel="bookmark">ubuntu 12.04 创建启动器&nbsp;&raquo;</a>
+        
+    </nav>
+    <div class="comment">
+        
+            
+        
+    </div>
+</div>
+
+                </div>
+                <div class="aside">
+                    <div class="aside-contact">
+                        <h4 class="title">About me</h4>
+                        <div class="det fn-clear">
+                            <div class="det-image">
+                                <img src="http://www.gravatar.com/avatar/c57225b6048481bc0dcd4e388dfcc99c?s=200" />
+                            </div>
+                            <div class="det-text">
+                                <p>我是「ming」，观察思考实践，不断前行。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aside-item">
+                        <h4 class="title">Recent Posts</h4>
+                        <ul class="list">
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/24/game-theory.html" title="Game theory - 博弈论" rel="bookmark">Game theory - 博弈论</a></li>
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/23/big-data-and-cloud.html" title="big data and cloud" rel="bookmark">big data and cloud</a></li>
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/10/typo-css.html" title="TYPO.CSS" rel="bookmark">TYPO.CSS</a></li>
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/04/a-few-words-about-cloud-storage.html" title="云存储" rel="bookmark">云存储</a></li>
+                            
+                                <li><a href="http://localhost:4000/tools/2012/08/04/create-logo-with-inkscape.html" title="create logo with inkscape" rel="bookmark">create logo with inkscape</a></li>
+                            
+                                <li><a href="http://localhost:4000/linux/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html" title="ubuntu 12.04 创建启动器" rel="bookmark">ubuntu 12.04 创建启动器</a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="aside-item">
+                        <h4 class="title">友情链接</h4>
+                        <ul class="list">
+                            
+                                
+                            
+                                
+                                    
+                                    <li><a href="http://www.zhanxin.info" title="掌心" target="_blank">掌心</a></li>
+                                    
+                                
+                            
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="footer">
+                <p>Copyright 2013. Ming all rights reserved. Theme by <a href="http://www.zhanxin.info" target="_blank">掌心</a>.</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        
+            
+                
+            
+        
+    </body>
+</html>

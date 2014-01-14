@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+         **
+         * Auther:      掌心
+         * Contact:     http://www.zhanxin.info
+         * Create:      2013.08.10
+         * Theme Name:  Kunka
+         * Authorize:   BY-NC-SA
+         **
+        -->
+        <meta charset="utf-8">
+        <title>云存储 - Ming's</title>
+        <!-- meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="generator" content="Jekyll" />
+        <meta name="author" content="ming" />
+        <meta name="description" content="code, dream, life and more.." />
+        <meta name="keywords" content="" />
+        <!-- atom -->
+        <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="http://localhost:4000/atom.xml" />
+        <link rel="shortcut icon" href="http://jekyllrb.com/favicon.png" type="image/x-icon" />
+        <!-- font-awesome -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+        <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+        
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        
+    </head>
+    <body>
+        <div class="head fn-clear">
+            <div class="header">
+                <h1 class="logo">
+                    <a href="http://localhost:4000"><i class="icon-anchor"></i></a>
+                </h1>
+                <nav class="nav">
+                    <ul>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/index.html">
+                                首页
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/categories.html">
+                                分类目录
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/archives.html">
+                                文章归档
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/contact.html">
+                                联系我
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/links.html">
+                                友情链接
+                            </a>
+                            
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <div class="follow">
+                    
+                    <a href="http://weibo.com/feitian124" target="_blank"><i class="icon-weibo"></i></a>
+                    
+                    <a href="http://github.com/feitian124" target="_blank"><i class="icon-github-alt"></i></a>
+                    
+                    <a href="http://twitter.com/feitian124" target="_blank"><i class="icon-twitter"></i></a>
+                    
+                    <a href="http://google.com/feitian124" target="_blank"><i class="icon-google-plus"></i></a>
+                    
+                    <a href="/atom.xml" target="_blank"><i class="icon-rss"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="contain fn-clear">
+            <div class="container fn-clear">
+                <div class="main">
+                    <div class="article article-post">
+    <h2 class="title">云存储</h2>
+    <div class="info">
+        <span class="info-title"><i class="icon-calendar"></i> Published: </span>
+        <span class="info-date">04 Aug 2012</span>
+        <span class="info-title"><i class="icon-folder-open"></i> Category: </span>
+        <span class="info-link"><a href="http://localhost:4000/categories.html#-ref" ></a></span>
+    </div>
+    <p>写博客有时想放一些图片，就想到了云储存。平常也关注了下，但没认真考察过。
+首先说一下访问云的方式，从严格到开放的顺序：</p>
+
+<ol>
+<li>需要登录他们的网站或者客户端，才能使用。既没有任何API。</li>
+<li>有特定API，且是需要验证。如php，ios等。</li>
+<li>有通用API，如json，uri等，但是会跳转到他们的网站。（外链 - Direct link:download)</li>
+<li>通过url直接访问。（直链 - Direct link:streaming)</li>
+</ol>
+
+<p>然后看一下收费，基本都是这种存储 + 流量 分开付费的方式。</p>
+
+<p>然后我们看看一些云存储服务商。 </p>
+
+<ol>
+<li><p>先说互联网老大，google storage,支持1，2，3种访问方式，到2012年底前，以下免费：
+<code>
+5 GB of storage
+25 GB of download data (20 GB to Americas and EMEA*; 5 GB to Asia-Pacific)
+25 GB of upload data (20 GB to Americas and EMEA*; 5 GB to Asia-Pacific)
+30,000 GET, HEAD requests
+3,000 PUT, POST, GET bucket, GET service requests
+</code></p></li>
+<li><p>opendrive *
+5G的免费存储，支持1，2，3种访问方式，通过交换链接，可以支持第4种访问方式加少量流量。
+适合写博客的我。<a href="http://www.opendrive.com" title="OpenDrive - Online storage, backup and file management">OpenDrive</a></p></li>
+<li><p>华为dbank
+提供较高性价比的直链服务。0.48/g，比google和有拍都便宜。</p></li>
+<li><p>有拍
+支持1，2，3，4种访问方式，无免费配额。听说服务稳定，价格适中。</p></li>
+<li><p>盛大云
+支持1，2，无免费版，仿亚马逊的，现在提够很多云服务。</p></li>
+<li><p>金山快盘 *
+注册送5G，支持1，2，3种访问方式。免费使用。</p></li>
+<li><p>skydrive *
+之前是25G，现在注册只有5G了。支持1，2，3种访问方式。有免费配额。</p></li>
+<li><p>dropbox
+和skydrive类似。</p></li>
+<li><p>ubuntu one *
+我用ubuntu，所以也用上了这个。5G免费配额。</p></li>
+<li><p>amazon s3
+知道它是老大，可惜一直被墙，无缘使用。</p>
+
+<h2>*表示已经试用。</h2></li>
+</ol>
+
+    <nav class="article-previous fn-clear">
+        
+        <a class="prev" href="/tools/2012/08/04/create-logo-with-inkscape.html" rel="bookmark">&laquo;&nbsp;create logo with inkscape</a>
+        
+        
+        <a class="next" href="/resources/2012/08/10/typo-css.html" rel="bookmark">TYPO.CSS&nbsp;&raquo;</a>
+        
+    </nav>
+    <div class="comment">
+        
+            
+        
+    </div>
+</div>
+
+                </div>
+                <div class="aside">
+                    <div class="aside-contact">
+                        <h4 class="title">About me</h4>
+                        <div class="det fn-clear">
+                            <div class="det-image">
+                                <img src="http://www.gravatar.com/avatar/c57225b6048481bc0dcd4e388dfcc99c?s=200" />
+                            </div>
+                            <div class="det-text">
+                                <p>我是「ming」，观察思考实践，不断前行。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aside-item">
+                        <h4 class="title">Recent Posts</h4>
+                        <ul class="list">
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/24/game-theory.html" title="Game theory - 博弈论" rel="bookmark">Game theory - 博弈论</a></li>
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/23/big-data-and-cloud.html" title="big data and cloud" rel="bookmark">big data and cloud</a></li>
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/10/typo-css.html" title="TYPO.CSS" rel="bookmark">TYPO.CSS</a></li>
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/04/a-few-words-about-cloud-storage.html" title="云存储" rel="bookmark">云存储</a></li>
+                            
+                                <li><a href="http://localhost:4000/tools/2012/08/04/create-logo-with-inkscape.html" title="create logo with inkscape" rel="bookmark">create logo with inkscape</a></li>
+                            
+                                <li><a href="http://localhost:4000/linux/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html" title="ubuntu 12.04 创建启动器" rel="bookmark">ubuntu 12.04 创建启动器</a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="aside-item">
+                        <h4 class="title">友情链接</h4>
+                        <ul class="list">
+                            
+                                
+                            
+                                
+                                    
+                                    <li><a href="http://www.zhanxin.info" title="掌心" target="_blank">掌心</a></li>
+                                    
+                                
+                            
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="footer">
+                <p>Copyright 2013. Ming all rights reserved. Theme by <a href="http://www.zhanxin.info" target="_blank">掌心</a>.</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        
+            
+                
+            
+        
+    </body>
+</html>

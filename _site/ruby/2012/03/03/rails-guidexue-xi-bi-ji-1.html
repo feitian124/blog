@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+         **
+         * Auther:      掌心
+         * Contact:     http://www.zhanxin.info
+         * Create:      2013.08.10
+         * Theme Name:  Kunka
+         * Authorize:   BY-NC-SA
+         **
+        -->
+        <meta charset="utf-8">
+        <title>rails guide学习笔记1 - Ming's</title>
+        <!-- meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="generator" content="Jekyll" />
+        <meta name="author" content="ming" />
+        <meta name="description" content="code, dream, life and more.." />
+        <meta name="keywords" content="" />
+        <!-- atom -->
+        <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="http://localhost:4000/atom.xml" />
+        <link rel="shortcut icon" href="http://jekyllrb.com/favicon.png" type="image/x-icon" />
+        <!-- font-awesome -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+        <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+        
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        
+    </head>
+    <body>
+        <div class="head fn-clear">
+            <div class="header">
+                <h1 class="logo">
+                    <a href="http://localhost:4000"><i class="icon-anchor"></i></a>
+                </h1>
+                <nav class="nav">
+                    <ul>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/index.html">
+                                首页
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/categories.html">
+                                分类目录
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/archives.html">
+                                文章归档
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/contact.html">
+                                联系我
+                            </a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item ">
+                            <a href="http://localhost:4000/links.html">
+                                友情链接
+                            </a>
+                            
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <div class="follow">
+                    
+                    <a href="http://weibo.com/feitian124" target="_blank"><i class="icon-weibo"></i></a>
+                    
+                    <a href="http://github.com/feitian124" target="_blank"><i class="icon-github-alt"></i></a>
+                    
+                    <a href="http://twitter.com/feitian124" target="_blank"><i class="icon-twitter"></i></a>
+                    
+                    <a href="http://google.com/feitian124" target="_blank"><i class="icon-google-plus"></i></a>
+                    
+                    <a href="/atom.xml" target="_blank"><i class="icon-rss"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="contain fn-clear">
+            <div class="container fn-clear">
+                <div class="main">
+                    <div class="article article-post">
+    <h2 class="title">rails guide学习笔记1</h2>
+    <div class="info">
+        <span class="info-title"><i class="icon-calendar"></i> Published: </span>
+        <span class="info-date">03 Mar 2012</span>
+        <span class="info-title"><i class="icon-folder-open"></i> Category: </span>
+        <span class="info-link"><a href="http://localhost:4000/categories.html#-ref" ></a></span>
+    </div>
+    <p>学习rails也有2，3个星期了。虽然有javaEE的使用经验，也较系统的提前学习了ruby，
+不得不说学习起来还是有不少的难度。简单来说，ruby on raisl就相当于java中的
+struts＋spring＋habinate，再加一个非常方便的代码生成工具。</p>
+
+<p>同时，也建议初学者直接从RailsGuides官方文档作为学习的第一站，因为这里有对rails
+方方面面的介绍，从怎么做到为什么这么做。以我为例，我学的第一本教材是那本著名的
+《用rails进行敏捷开发》第4版（Agile Web Development），但由于没有一点概念，书中
+说用rails new，generate，scaffold等时不知道他是想干什么，为什么他要这么做，只能跟
+着书一步一步作，学习效果并不理想, 所有我只有fall back来看官方文档。也见解印证了我
+的那个观点：官方文档永远是值得考虑认真学习的文档。</p>
+
+<p>今天基本看完教材上model的部分,终于也能在学习中体验到爽的感觉。聪明的migrations,
+聪明的验证和回调，聪明的实体关联，聪明的查询接口。ror的开发理念让很多东西都聪明起来，
+当然，里面也有很多你一不注意就会犯错的小陷阱。比如哪些方法会触发回调，低性能的N＋1查
+询问题等。我要在理解的基础上记忆的同时，增加实战经验。</p>
+
+    <nav class="article-previous fn-clear">
+        
+        <a class="prev" href="/life/2012/02/25/hello.html" rel="bookmark">&laquo;&nbsp;Hello World</a>
+        
+        
+        <a class="next" href="/resources/2012/06/28/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html" rel="bookmark">node.js底层是基于什么原理&nbsp;&raquo;</a>
+        
+    </nav>
+    <div class="comment">
+        
+            
+        
+    </div>
+</div>
+
+                </div>
+                <div class="aside">
+                    <div class="aside-contact">
+                        <h4 class="title">About me</h4>
+                        <div class="det fn-clear">
+                            <div class="det-image">
+                                <img src="http://www.gravatar.com/avatar/c57225b6048481bc0dcd4e388dfcc99c?s=200" />
+                            </div>
+                            <div class="det-text">
+                                <p>我是「ming」，观察思考实践，不断前行。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aside-item">
+                        <h4 class="title">Recent Posts</h4>
+                        <ul class="list">
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/24/game-theory.html" title="Game theory - 博弈论" rel="bookmark">Game theory - 博弈论</a></li>
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/23/big-data-and-cloud.html" title="big data and cloud" rel="bookmark">big data and cloud</a></li>
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/10/typo-css.html" title="TYPO.CSS" rel="bookmark">TYPO.CSS</a></li>
+                            
+                                <li><a href="http://localhost:4000/resources/2012/08/04/a-few-words-about-cloud-storage.html" title="云存储" rel="bookmark">云存储</a></li>
+                            
+                                <li><a href="http://localhost:4000/tools/2012/08/04/create-logo-with-inkscape.html" title="create logo with inkscape" rel="bookmark">create logo with inkscape</a></li>
+                            
+                                <li><a href="http://localhost:4000/linux/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html" title="ubuntu 12.04 创建启动器" rel="bookmark">ubuntu 12.04 创建启动器</a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="aside-item">
+                        <h4 class="title">友情链接</h4>
+                        <ul class="list">
+                            
+                                
+                            
+                                
+                                    
+                                    <li><a href="http://www.zhanxin.info" title="掌心" target="_blank">掌心</a></li>
+                                    
+                                
+                            
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="footer">
+                <p>Copyright 2013. Ming all rights reserved. Theme by <a href="http://www.zhanxin.info" target="_blank">掌心</a>.</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        
+            
+                
+            
+        
+    </body>
+</html>
