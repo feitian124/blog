@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
    <title>Ming's</title>
-   <link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml"/>
-   <link href="http://localhost:4000" rel="alternate" type="text/html" />
-   <updated>2014-01-14T23:10:49+08:00</updated>
-   <id>http://localhost:4000</id>
+   <link href="http://blog.yunnuy.com/atom.xml" rel="self" type="application/atom+xml"/>
+   <link href="http://blog.yunnuy.com" rel="alternate" type="text/html" />
+   <updated>2014-03-01T21:54:20+08:00</updated>
+   <id>http://blog.yunnuy.com</id>
    <author>
      <name>ming</name>
      <email>feitian124@gmail.com</email>
@@ -13,10 +13,31 @@
 
    
    <entry>
+     <title>手机自助点餐</title>
+     <link href="http://blog.yunnuy.com/thoughts/2014/03/01/shou-ji-zi-zhu-dian-can.html"/>
+     <updated>2014-03-01T11:18:02Z</updated>
+     <id>http://blog.yunnuy.com/thoughts/2014/03/01/shou-ji-zi-zhu-dian-can</id>
+     <content type="html">&lt;p&gt;小白领 A和女朋友B逛街，肚子饿了然后掏出手机，团了一家附近的餐厅吃饭。
+走进餐厅，门口写着: 手机自助点餐，立减5元，还能享受免费wifi。&lt;/p&gt;
+
+&lt;p&gt;A找了一个桌子坐下，发现桌子上贴着二维码，nfc标签和一个网站，A果断掏出手机，
+由于没有nfc，扫了下桌子上的二维码，手机自动连上wifi并打开餐厅的订餐页面。
+菜品很新，有多张图和详细的描述，还有之前吃过人的评价。A点了人气最高的三个菜品，
+并信用卡付了款。对了，他还用了上次来送的饮料劵，他居然忘记去年不知道啥时候来过
+这家店了，还好送的劵下个月过期。&lt;/p&gt;
+
+&lt;p&gt;A连着wifi刷了微博，找了几个最热的段子和女朋友分享，不到10分钟菜就上来了。嗯，
+份量足，色香味俱全。酒足饭饱之后，A忍不住给了个5星好评。&lt;/p&gt;
+
+&lt;p&gt;叮咚，老板又送了一张饮料劵～&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
      <title>Game theory - 博弈论</title>
-     <link href="http://localhost:4000/resources/2012/08/24/game-theory.html"/>
+     <link href="http://blog.yunnuy.com/resources/2012/08/24/game-theory.html"/>
      <updated>2012-08-24T23:31:00+08:00</updated>
-     <id>http://localhost:4000/resources/2012/08/24/game-theory</id>
+     <id>http://blog.yunnuy.com/resources/2012/08/24/game-theory</id>
      <content type="html">&lt;p&gt;游戏中双方为了达到各自的目标和利益，各方必须考虑对手的各种可能的行动方案，并力图选取对自己最为有利或最为合理的方案。
 博弈论考虑游戏中的个体的预测行为和实际行为，并研究它们的优化策略。&lt;/p&gt;
 
@@ -50,9 +71,9 @@
    
    <entry>
      <title>big data and cloud</title>
-     <link href="http://localhost:4000/resources/2012/08/23/big-data-and-cloud.html"/>
+     <link href="http://blog.yunnuy.com/resources/2012/08/23/big-data-and-cloud.html"/>
      <updated>2012-08-23T23:31:00+08:00</updated>
-     <id>http://localhost:4000/resources/2012/08/23/big-data-and-cloud</id>
+     <id>http://blog.yunnuy.com/resources/2012/08/23/big-data-and-cloud</id>
      <content type="html">&lt;p&gt;今天公司的town hall是介绍了一些新技术及公司引入的情况。有钱好办事，公司在这方面还是挺投入的。&lt;/p&gt;
 
 &lt;h2&gt;big data&lt;/h2&gt;
@@ -97,9 +118,9 @@ Maas (Middleware as service)    &lt;/p&gt;
    
    <entry>
      <title>TYPO.CSS</title>
-     <link href="http://localhost:4000/resources/2012/08/10/typo-css.html"/>
+     <link href="http://blog.yunnuy.com/resources/2012/08/10/typo-css.html"/>
      <updated>2012-08-10T12:55:11Z</updated>
-     <id>http://localhost:4000/resources/2012/08/10/typo-css</id>
+     <id>http://blog.yunnuy.com/resources/2012/08/10/typo-css</id>
      <content type="html">&lt;h2 id=&quot;tagline&quot;&gt;一致化浏览器排版效果，构建最适合中文阅读的网页排版&lt;/h2&gt;
 
 &lt;ol id=&quot;table&quot;&gt;
@@ -467,9 +488,9 @@ Maas (Middleware as service)    &lt;/p&gt;
    
    <entry>
      <title>云存储</title>
-     <link href="http://localhost:4000/resources/2012/08/04/a-few-words-about-cloud-storage.html"/>
+     <link href="http://blog.yunnuy.com/resources/2012/08/04/a-few-words-about-cloud-storage.html"/>
      <updated>2012-08-04T15:33:00+08:00</updated>
-     <id>http://localhost:4000/resources/2012/08/04/a-few-words-about-cloud-storage</id>
+     <id>http://blog.yunnuy.com/resources/2012/08/04/a-few-words-about-cloud-storage</id>
      <content type="html">&lt;p&gt;写博客有时想放一些图片，就想到了云储存。平常也关注了下，但没认真考察过。
 首先说一下访问云的方式，从严格到开放的顺序：&lt;/p&gt;
 
@@ -520,9 +541,9 @@ Maas (Middleware as service)    &lt;/p&gt;
    
    <entry>
      <title>create logo with inkscape</title>
-     <link href="http://localhost:4000/tools/2012/08/04/create-logo-with-inkscape.html"/>
+     <link href="http://blog.yunnuy.com/tools/2012/08/04/create-logo-with-inkscape.html"/>
      <updated>2012-08-04T12:25:00+08:00</updated>
-     <id>http://localhost:4000/tools/2012/08/04/create-logo-with-inkscape</id>
+     <id>http://blog.yunnuy.com/tools/2012/08/04/create-logo-with-inkscape</id>
      <content type="html">&lt;p&gt;最近想为我的域名www.yunnuy.com做一个小logo，于是到网上找了个画矢量图的工具。由于我用的unbutu，在软件中心
 矢量类排名第一的就是inkscape了，所以下载了下来，看了点资料，开始动手。&lt;/p&gt;
 
@@ -546,9 +567,9 @@ Maas (Middleware as service)    &lt;/p&gt;
    
    <entry>
      <title>ubuntu 12.04 创建启动器</title>
-     <link href="http://localhost:4000/linux/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html"/>
+     <link href="http://blog.yunnuy.com/linux/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html"/>
      <updated>2012-07-14T01:03:00+08:00</updated>
-     <id>http://localhost:4000/linux/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi</id>
+     <id>http://blog.yunnuy.com/linux/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi</id>
      <content type="html">&lt;p&gt;最近又想折腾下android，所有在ubuntu下弄了下开发环境。
 值得一提的是，ubuntu下如果你要在命令行里能使用你的
 命令，你需要将可执行文件路径加进&lt;code&gt;$PATH&lt;/code&gt;, 那如果你想在
@@ -587,9 +608,9 @@ added a luncher to &lt;code&gt;/usr/share/applications/eclipse.desktop&lt;/code&
    
    <entry>
      <title>my first gem</title>
-     <link href="http://localhost:4000/ruby/2012/07/11/my-first-gem.html"/>
+     <link href="http://blog.yunnuy.com/ruby/2012/07/11/my-first-gem.html"/>
      <updated>2012-07-11T23:11:00+08:00</updated>
-     <id>http://localhost:4000/ruby/2012/07/11/my-first-gem</id>
+     <id>http://blog.yunnuy.com/ruby/2012/07/11/my-first-gem</id>
      <content type="html">&lt;p&gt;学了大半年的rails，却还没写过自己到gem，我这个吉他新手，还老需要去翻教材，找一些和弦是如何按的，
 于是我决定写一个简单的gem，用来查找这些和弦。思路：  &lt;/p&gt;
 
@@ -643,9 +664,9 @@ am
    
    <entry>
      <title>面了几家公司</title>
-     <link href="http://localhost:4000/life/2012/06/28/mian-liao-ji-jia-gong-si.html"/>
+     <link href="http://blog.yunnuy.com/life/2012/06/28/mian-liao-ji-jia-gong-si.html"/>
      <updated>2012-06-28T22:45:00+08:00</updated>
-     <id>http://localhost:4000/life/2012/06/28/mian-liao-ji-jia-gong-si</id>
+     <id>http://blog.yunnuy.com/life/2012/06/28/mian-liao-ji-jia-gong-si</id>
      <content type="html">&lt;p&gt;又到三四月份，我本没有离职的心思，不过旁边的同事都骚动不已，从小的到老的，原因不外乎公司待遇偏低。 从已经离开的同事的情形看，确实如此，因为普遍能到涨个1.5到2倍的待遇，可叹整个it行业是怎么回事，在前东家 可有可无，得不到重视，待遇迟迟没有提升；于是纷纷另寻高就，靠跳槽来提薪已成为一种趋势。在工作前5年尤盛， 本人也是个例子，不过我是反面教材，不说也罢。&lt;/p&gt;
 
 &lt;p&gt;我还是挺喜欢现在的公司的，环境还好，人际关系简单纯朴，工作不忙几乎不用加班，有足够的业余时间做感兴趣的东西。 不过大家都在找，我也找找看我是啥身价吧，说不定合适的，跳一跳也未尝不可。&lt;/p&gt;
@@ -668,38 +689,15 @@ am
    
    <entry>
      <title>node.js底层是基于什么原理</title>
-     <link href="http://localhost:4000/resources/2012/06/28/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html"/>
+     <link href="http://blog.yunnuy.com/resources/2012/06/28/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html"/>
      <updated>2012-06-28T22:44:00+08:00</updated>
-     <id>http://localhost:4000/resources/2012/06/28/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li</id>
+     <id>http://blog.yunnuy.com/resources/2012/06/28/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li</id>
      <content type="html">&lt;p&gt;今天在社区里面闲逛，发现node.js很火。之前也零零星星的看过一些node.js的介绍，知道它底层是google v8引擎的 基于事件模型的服务器软件。但脑子有几个why一直挥之不去：&lt;/p&gt;
 
 &lt;p&gt;1.基于事件模型的理论并不新鲜，为什么没有在其他语言中实现。可能的原因是，其他语言都没有基于基于事件模型的概念或者习惯， 而在浏览器里运行的js则处处都是事件，onclick，onmouseover等等。 
  2.在不是基于事件的http请求中，客户端和服务器建立tcp连接（http都是基于tcp吧），直到响应完毕，断掉tcp连接。 而现在node.js中在收到请求后，通知客户端断掉tcp连接，并说我之后会把找到的东西发给你。问题来了：服务器端是 怎么找到客户器端的呢？我们知道客户端去找服务器端是花了不少力气的，先dns，再ip；现在tcp断了，我不知道有什么机制 能让服务器找到客户端？难道node.js不是用在这样的场景么？&lt;/p&gt;
 
 &lt;p&gt;好吧，精力有限，还来不及去研究这个问题的答案。哪位同学了解的话，解答一下吧。纯属解惑。&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>rails guide学习笔记1</title>
-     <link href="http://localhost:4000/ruby/2012/03/03/rails-guidexue-xi-bi-ji-1.html"/>
-     <updated>2012-03-03T23:55:00+08:00</updated>
-     <id>http://localhost:4000/ruby/2012/03/03/rails-guidexue-xi-bi-ji-1</id>
-     <content type="html">&lt;p&gt;学习rails也有2，3个星期了。虽然有javaEE的使用经验，也较系统的提前学习了ruby，
-不得不说学习起来还是有不少的难度。简单来说，ruby on raisl就相当于java中的
-struts＋spring＋habinate，再加一个非常方便的代码生成工具。&lt;/p&gt;
-
-&lt;p&gt;同时，也建议初学者直接从RailsGuides官方文档作为学习的第一站，因为这里有对rails
-方方面面的介绍，从怎么做到为什么这么做。以我为例，我学的第一本教材是那本著名的
-《用rails进行敏捷开发》第4版（Agile Web Development），但由于没有一点概念，书中
-说用rails new，generate，scaffold等时不知道他是想干什么，为什么他要这么做，只能跟
-着书一步一步作，学习效果并不理想, 所有我只有fall back来看官方文档。也见解印证了我
-的那个观点：官方文档永远是值得考虑认真学习的文档。&lt;/p&gt;
-
-&lt;p&gt;今天基本看完教材上model的部分,终于也能在学习中体验到爽的感觉。聪明的migrations,
-聪明的验证和回调，聪明的实体关联，聪明的查询接口。ror的开发理念让很多东西都聪明起来，
-当然，里面也有很多你一不注意就会犯错的小陷阱。比如哪些方法会触发回调，低性能的N＋1查
-询问题等。我要在理解的基础上记忆的同时，增加实战经验。&lt;/p&gt;
 </content>
    </entry>
    
