@@ -4,7 +4,7 @@
    <title>Ming's</title>
    <link href="http://blog.yunnuy.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://blog.yunnuy.com" rel="alternate" type="text/html" />
-   <updated>2014-03-01T21:54:20+08:00</updated>
+   <updated>2014-05-08T22:09:09+08:00</updated>
    <id>http://blog.yunnuy.com</id>
    <author>
      <name>ming</name>
@@ -15,7 +15,7 @@
    <entry>
      <title>手机自助点餐</title>
      <link href="http://blog.yunnuy.com/thoughts/2014/03/01/shou-ji-zi-zhu-dian-can.html"/>
-     <updated>2014-03-01T11:18:02Z</updated>
+     <updated>2014-03-01T19:18:02+08:00</updated>
      <id>http://blog.yunnuy.com/thoughts/2014/03/01/shou-ji-zi-zhu-dian-can</id>
      <content type="html">&lt;p&gt;小白领 A和女朋友B逛街，肚子饿了然后掏出手机，团了一家附近的餐厅吃饭。
 走进餐厅，门口写着: 手机自助点餐，立减5元，还能享受免费wifi。&lt;/p&gt;
@@ -119,7 +119,7 @@ Maas (Middleware as service)    &lt;/p&gt;
    <entry>
      <title>TYPO.CSS</title>
      <link href="http://blog.yunnuy.com/resources/2012/08/10/typo-css.html"/>
-     <updated>2012-08-10T12:55:11Z</updated>
+     <updated>2012-08-10T20:55:11+08:00</updated>
      <id>http://blog.yunnuy.com/resources/2012/08/10/typo-css</id>
      <content type="html">&lt;h2 id=&quot;tagline&quot;&gt;一致化浏览器排版效果，构建最适合中文阅读的网页排版&lt;/h2&gt;
 
@@ -321,8 +321,7 @@ Maas (Middleware as service)    &lt;/p&gt;
 &lt;span class=&quot;c&quot;&gt;/* 现代排版：保证块/段落之间的空白隔行 */&lt;/span&gt;
 &lt;span class=&quot;nc&quot;&gt;.typo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.typo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.typo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.typo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;ol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.typo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;dl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.typo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;form&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.typo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;hr&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1em&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.6em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;section3&quot;&gt;三、附录&lt;/h3&gt;
 
@@ -532,10 +531,12 @@ Maas (Middleware as service)    &lt;/p&gt;
 &lt;li&gt;&lt;p&gt;ubuntu one *
 我用ubuntu，所以也用上了这个。5G免费配额。&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;amazon s3
-知道它是老大，可惜一直被墙，无缘使用。&lt;/p&gt;
-
-&lt;h2&gt;*表示已经试用。&lt;/h2&gt;&lt;/li&gt;
+知道它是老大，可惜一直被墙，无缘使用。&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;*表示已经试用。&lt;/p&gt;
+
+&lt;hr&gt;
 </content>
    </entry>
    
@@ -626,7 +627,7 @@ am
 |--0--|-----|-----|-----|-----|
 |--0--|-----|-----|-----|-----|&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt; 3.  用rake显示多个或指定和弦
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt; 3.  用rake显示多个或指定和弦
 
 我们可以用bundle来新建一个gem，他会替我们生成一个骨架`bundle gem guitar_chords`.  
 我的gem是下面这个样子
