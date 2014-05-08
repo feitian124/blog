@@ -4,13 +4,41 @@
    <title>Ming's</title>
    <link href="http://blog.yunnuy.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://blog.yunnuy.com" rel="alternate" type="text/html" />
-   <updated>2014-05-08T22:09:09+08:00</updated>
+   <updated>2014-05-08T22:57:23+08:00</updated>
    <id>http://blog.yunnuy.com</id>
    <author>
      <name>ming</name>
      <email>feitian124@gmail.com</email>
    </author>
 
+   
+   <entry>
+     <title>emberjs-learn-1</title>
+     <link href="http://blog.yunnuy.com/2014/05/08/emberjs-learn-1.html"/>
+     <updated>2014-05-08T22:16:22+08:00</updated>
+     <id>http://blog.yunnuy.com/2014/05/08/emberjs-learn-1</id>
+     <content type="html">&lt;p&gt;换了个做web的小公司,找回不少工作的激情。不但有心仪的 ruby on rails，还有很火的前端 MVC 框架 emberjs，感觉立马进化到了21世纪。
+rails 有10多分钟造一个blog的教程，ember好不逊色，也有10多分钟造一个blog的教程，页面易用程度等甚至更甚一畴。&lt;/p&gt;
+
+&lt;p&gt;先写一些体会,好的和相似的地方：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;有些理念和rails相似，如命名约定；大量使用各种钩子；也是使用模板再编译成HTML。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;绑定很强大。双向绑定，单向绑定，计算属性，观察者模式等，让变量的同步简单。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;事件处理很强大。通过捕捉原生事件，转化为ember事件，再逐级处理，强大又简单。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;充分使用ember特性，内置组件很强大。举个例子，内置的输入组件, 如果不指定type，是普通的输入框；指定为number，则变成有增减按钮的输入组件；如果是range，则变成一个拖动条。一个type的变动，可以改变视图和行为，省去大量javascript代码。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不好或者不相同的地方：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;学习成本有点高，坑也不少。有些约定不直观，不了解你不知道如何下手。如绑定model后要通过content属性访问。。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;javascript 感觉没有 ruby 优雅，一些实现看上去就没有 rails 简洁。如指定 has_many; &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;javascript 的作用域和上下文不是很明显, 要理解清楚。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;不要忘记这里的 M V C 都是在浏览器中运行，都是javascript对象。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+   </entry>
    
    <entry>
      <title>手机自助点餐</title>
@@ -685,20 +713,6 @@ am
 &lt;/ol&gt;
 
 &lt;p&gt;从这次面试也有一点体会，虽然我有较多的工作经验，我还欠缺一些核心竞争力，业余学到的东西android和ruby等也没能为我加分。 以后要注意强化英语，学好ror并多动手。争取自己上一个有影响力的开源项目。&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>node.js底层是基于什么原理</title>
-     <link href="http://blog.yunnuy.com/resources/2012/06/28/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li.html"/>
-     <updated>2012-06-28T22:44:00+08:00</updated>
-     <id>http://blog.yunnuy.com/resources/2012/06/28/node-dot-jsdi-ceng-shi-ji-yu-shi-yao-yuan-li</id>
-     <content type="html">&lt;p&gt;今天在社区里面闲逛，发现node.js很火。之前也零零星星的看过一些node.js的介绍，知道它底层是google v8引擎的 基于事件模型的服务器软件。但脑子有几个why一直挥之不去：&lt;/p&gt;
-
-&lt;p&gt;1.基于事件模型的理论并不新鲜，为什么没有在其他语言中实现。可能的原因是，其他语言都没有基于基于事件模型的概念或者习惯， 而在浏览器里运行的js则处处都是事件，onclick，onmouseover等等。 
- 2.在不是基于事件的http请求中，客户端和服务器建立tcp连接（http都是基于tcp吧），直到响应完毕，断掉tcp连接。 而现在node.js中在收到请求后，通知客户端断掉tcp连接，并说我之后会把找到的东西发给你。问题来了：服务器端是 怎么找到客户器端的呢？我们知道客户端去找服务器端是花了不少力气的，先dns，再ip；现在tcp断了，我不知道有什么机制 能让服务器找到客户端？难道node.js不是用在这样的场景么？&lt;/p&gt;
-
-&lt;p&gt;好吧，精力有限，还来不及去研究这个问题的答案。哪位同学了解的话，解答一下吧。纯属解惑。&lt;/p&gt;
 </content>
    </entry>
    
