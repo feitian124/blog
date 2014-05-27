@@ -3,7 +3,7 @@ layout: post
 title: "ubuntu 12.04 创建启动器"
 date: 2012-07-14 01:03
 comments: true
-categories: linux
+categories: work
 ---
 
 最近又想折腾下android，所有在ubuntu下弄了下开发环境。

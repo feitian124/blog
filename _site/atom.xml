@@ -4,7 +4,7 @@
    <title>Ming's</title>
    <link href="http://blog.yunnuy.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://blog.yunnuy.com" rel="alternate" type="text/html" />
-   <updated>2014-05-27T23:27:38+08:00</updated>
+   <updated>2014-05-27T23:33:05+08:00</updated>
    <id>http://blog.yunnuy.com</id>
    <author>
      <name>ming</name>
@@ -61,9 +61,9 @@
    
    <entry>
      <title>ember学习笔记一</title>
-     <link href="http://blog.yunnuy.com/thoughts/2014/05/08/emberjs-learn-1.html"/>
+     <link href="http://blog.yunnuy.com/work/2014/05/08/emberjs-learn-1.html"/>
      <updated>2014-05-08T22:16:22+08:00</updated>
-     <id>http://blog.yunnuy.com/thoughts/2014/05/08/emberjs-learn-1</id>
+     <id>http://blog.yunnuy.com/work/2014/05/08/emberjs-learn-1</id>
      <content type="html">&lt;p&gt;换了个做web的小公司,找回不少工作的激情。不但有心仪的 ruby on rails，还有很火的前端 MVC 框架 emberjs，感觉立马进化到了21世纪。
 rails 有10多分钟造一个blog的教程，ember好不逊色，也有10多分钟造一个blog的教程，页面易用程度等甚至更甚一畴。&lt;/p&gt;
 
@@ -89,9 +89,9 @@ rails 有10多分钟造一个blog的教程，ember好不逊色，也有10多分�
    
    <entry>
      <title>手机自助点餐</title>
-     <link href="http://blog.yunnuy.com/thoughts/2014/03/01/shou-ji-zi-zhu-dian-can.html"/>
+     <link href="http://blog.yunnuy.com/life/2014/03/01/shou-ji-zi-zhu-dian-can.html"/>
      <updated>2014-03-01T19:18:02+08:00</updated>
-     <id>http://blog.yunnuy.com/thoughts/2014/03/01/shou-ji-zi-zhu-dian-can</id>
+     <id>http://blog.yunnuy.com/life/2014/03/01/shou-ji-zi-zhu-dian-can</id>
      <content type="html">&lt;p&gt;小白领 A和女朋友B逛街，肚子饿了然后掏出手机，团了一家附近的餐厅吃饭。
 走进餐厅，门口写着: 手机自助点餐，立减5元，还能享受免费wifi。&lt;/p&gt;
 
@@ -617,9 +617,9 @@ Maas (Middleware as service)    &lt;/p&gt;
    
    <entry>
      <title>create logo with inkscape</title>
-     <link href="http://blog.yunnuy.com/tools/2012/08/04/create-logo-with-inkscape.html"/>
+     <link href="http://blog.yunnuy.com/resources/2012/08/04/create-logo-with-inkscape.html"/>
      <updated>2012-08-04T12:25:00+08:00</updated>
-     <id>http://blog.yunnuy.com/tools/2012/08/04/create-logo-with-inkscape</id>
+     <id>http://blog.yunnuy.com/resources/2012/08/04/create-logo-with-inkscape</id>
      <content type="html">&lt;p&gt;最近想为我的域名www.yunnuy.com做一个小logo，于是到网上找了个画矢量图的工具。由于我用的unbutu，在软件中心
 矢量类排名第一的就是inkscape了，所以下载了下来，看了点资料，开始动手。&lt;/p&gt;
 
@@ -643,9 +643,9 @@ Maas (Middleware as service)    &lt;/p&gt;
    
    <entry>
      <title>ubuntu 12.04 创建启动器</title>
-     <link href="http://blog.yunnuy.com/linux/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html"/>
+     <link href="http://blog.yunnuy.com/work/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi.html"/>
      <updated>2012-07-14T01:03:00+08:00</updated>
-     <id>http://blog.yunnuy.com/linux/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi</id>
+     <id>http://blog.yunnuy.com/work/2012/07/14/ubuntu-12-dot-04-chuang-jian-qi-dong-qi</id>
      <content type="html">&lt;p&gt;最近又想折腾下android，所有在ubuntu下弄了下开发环境。
 值得一提的是，ubuntu下如果你要在命令行里能使用你的
 命令，你需要将可执行文件路径加进&lt;code&gt;$PATH&lt;/code&gt;, 那如果你想在
@@ -684,9 +684,9 @@ added a luncher to &lt;code&gt;/usr/share/applications/eclipse.desktop&lt;/code&
    
    <entry>
      <title>my first gem</title>
-     <link href="http://blog.yunnuy.com/ruby/2012/07/11/my-first-gem.html"/>
+     <link href="http://blog.yunnuy.com/work/2012/07/11/my-first-gem.html"/>
      <updated>2012-07-11T23:11:00+08:00</updated>
-     <id>http://blog.yunnuy.com/ruby/2012/07/11/my-first-gem</id>
+     <id>http://blog.yunnuy.com/work/2012/07/11/my-first-gem</id>
      <content type="html">&lt;p&gt;学了大半年的rails，却还没写过自己到gem，我这个吉他新手，还老需要去翻教材，找一些和弦是如何按的，
 于是我决定写一个简单的gem，用来查找这些和弦。思路：  &lt;/p&gt;
 

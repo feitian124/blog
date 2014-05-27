@@ -3,7 +3,7 @@ layout: post
 title: "node.js底层是基于什么原理"
 date: 2012-06-28 22:44
 comments: true
-categories: resources
+categories: work
 ---
 
 今天在社区里面闲逛，发现node.js很火。之前也零零星星的看过一些node.js的介绍，知道它底层是google v8引擎的 基于事件模型的服务器软件。但脑子有几个why一直挥之不去：
