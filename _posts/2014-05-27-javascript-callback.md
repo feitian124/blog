@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "javascript callback(回调)"
-date: 2014-03-01 19:18:02 +0800
+date: 2014-05-27 19:18:02 +0800
 comments: true
 categories: work 
 ---
