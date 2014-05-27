@@ -4,7 +4,7 @@
    <title>Ming's</title>
    <link href="http://blog.yunnuy.com/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://blog.yunnuy.com" rel="alternate" type="text/html" />
-   <updated>2014-05-08T22:57:23+08:00</updated>
+   <updated>2014-05-27T23:23:42+08:00</updated>
    <id>http://blog.yunnuy.com</id>
    <author>
      <name>ming</name>
@@ -13,10 +13,10 @@
 
    
    <entry>
-     <title>emberjs-learn-1</title>
-     <link href="http://blog.yunnuy.com/2014/05/08/emberjs-learn-1.html"/>
+     <title>ember学习笔记一</title>
+     <link href="http://blog.yunnuy.com/thoughts/2014/05/08/emberjs-learn-1.html"/>
      <updated>2014-05-08T22:16:22+08:00</updated>
-     <id>http://blog.yunnuy.com/2014/05/08/emberjs-learn-1</id>
+     <id>http://blog.yunnuy.com/thoughts/2014/05/08/emberjs-learn-1</id>
      <content type="html">&lt;p&gt;换了个做web的小公司,找回不少工作的激情。不但有心仪的 ruby on rails，还有很火的前端 MVC 框架 emberjs，感觉立马进化到了21世纪。
 rails 有10多分钟造一个blog的教程，ember好不逊色，也有10多分钟造一个blog的教程，页面易用程度等甚至更甚一畴。&lt;/p&gt;
 
@@ -59,6 +59,53 @@ rails 有10多分钟造一个blog的教程，ember好不逊色，也有10多分�
 
 &lt;p&gt;叮咚，老板又送了一张饮料劵～&lt;/p&gt;
 </content>
+   </entry>
+   
+   <entry>
+     <title>javascript callback(回调)</title>
+     <link href="http://blog.yunnuy.com/work/2014/03/01/javascript-callback.html"/>
+     <updated>2014-03-01T19:18:02+08:00</updated>
+     <id>http://blog.yunnuy.com/work/2014/03/01/javascript-callback</id>
+     <content type="html">&lt;p&gt;最近在做前端开发工作,所以写了不少javascript代码.一直对javascript有成见,从前觉得就是浏览器里面做做跑马灯效果,做做验证啊等不严肃的语言. 现在看来我错了,javascript社区很活跃, 从jquery到前端mvc,到后端nodejs, grunt等, javascript的威力越来越强大.&lt;/p&gt;
+
+&lt;p&gt;javascript是单线程的语言,很多事件处理需要用到回调,从而也需要保留上下文,故又大量使用必包.最近自己用javascript的这些特性解决了一个碰到的难题,我对javascript的理解也开始上了一个台阶.&lt;/p&gt;
+
+&lt;p&gt;场景很简单,我需要在页面上面用canvas画多个图片,故需要在draw函数之前让image对象提前准备好.可是图片的加载都是异步的,我只能在onload回调函数中知晓图片加载完成; 我可以在onload里面维护一个计数器,然后判断计数器如果达到图片个数,我就知道所有图片加载好了.&lt;/p&gt;
+
+&lt;p&gt;然后我可以执行一个函数, 可是这个函数我现在还没有呢, 又或者我想图片加载完之后可以按需调用我需要的函数,怎么办呢? 只能用必包.&lt;/p&gt;
+
+&lt;p&gt;具体看代码:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;  &lt;span class=&quot;cm&quot;&gt;/* --------------- call back codes, for example:&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;     loadImages([&amp;#39;1.gif&amp;#39;, &amp;#39;2.gif&amp;#39;, &amp;#39;3.gif&amp;#39;]).done(function(images){&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;       alert(images.length);                     //alerts 3&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;       alert(images[0].src+&amp;quot; &amp;quot;+images[0].width); //alerts &amp;#39;1.gif 220&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;     })&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;   */&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;loadImages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;imgs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oneLoaded&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;allLoaded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imgs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;allLoaded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){};&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oneLoaded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onerror&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39; failed to load!&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;imgs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//return blank object with done() method&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;allLoaded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;allLoaded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
    </entry>
    
    <entry>
@@ -688,31 +735,6 @@ am
  1. rake部分&lt;br&gt;
  2. 用单例模式，在第一次加载&lt;code&gt;guitar_chords.rb&lt;/code&gt;时load所有的和弦对象。&lt;br&gt;
 你可以查看源码，见&lt;a href=&quot;https://github.com/feitian124/guitar_chords&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>面了几家公司</title>
-     <link href="http://blog.yunnuy.com/life/2012/06/28/mian-liao-ji-jia-gong-si.html"/>
-     <updated>2012-06-28T22:45:00+08:00</updated>
-     <id>http://blog.yunnuy.com/life/2012/06/28/mian-liao-ji-jia-gong-si</id>
-     <content type="html">&lt;p&gt;又到三四月份，我本没有离职的心思，不过旁边的同事都骚动不已，从小的到老的，原因不外乎公司待遇偏低。 从已经离开的同事的情形看，确实如此，因为普遍能到涨个1.5到2倍的待遇，可叹整个it行业是怎么回事，在前东家 可有可无，得不到重视，待遇迟迟没有提升；于是纷纷另寻高就，靠跳槽来提薪已成为一种趋势。在工作前5年尤盛， 本人也是个例子，不过我是反面教材，不说也罢。&lt;/p&gt;
-
-&lt;p&gt;我还是挺喜欢现在的公司的，环境还好，人际关系简单纯朴，工作不忙几乎不用加班，有足够的业余时间做感兴趣的东西。 不过大家都在找，我也找找看我是啥身价吧，说不定合适的，跳一跳也未尝不可。&lt;/p&gt;
-
-&lt;p&gt;在51job上更新了下简历，但只投了家ror的和中兴java的职位。工作地限杭州上海，一个星期收到4，5家面试。几乎都是做java的职位， 而我近一年主要作后端shell和plsql，java只是闲时android用用。而我现在更多的兴趣放在了ror上面，个人生产力，活跃的社区， 都对我很有吸引力。&lt;/p&gt;
-
-&lt;p&gt;列出几家的名字吧，算免费广告了，认识也算缘分: &lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;郎新 作电力系统的，java开发，在东部软件园内办公。给我的感觉是中规中矩的软件公司，好歹不会让我做长长的题目。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;税友 作税务系统的，java开发，在高新软件园办公，环境比郎新好点。一去就做几页的隐私调查，爹妈工资啥的。 然后作题，有个递归的题目，还有几个列出10种方法提升性能之类的题目感觉有点意思。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;华赛 华为做安全的子公司，也要填很多隐私的内容。不过技术面的面试官问的挺有水平，不会考你那些死记硬背的内容。 需要比较底层的知识，和我的知识结构不太匹配，其实有几个问题比如“设计一个协议可靠的传输2个文件”，当时没什么思路， 表现的不好，有点可惜。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;通策 上市公司的软件事业部。hr挺真诚。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;塔塔 上海外包到摩根。业务，技术，英语，综合能力,比较和我的竞争力匹配。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;从这次面试也有一点体会，虽然我有较多的工作经验，我还欠缺一些核心竞争力，业余学到的东西android和ruby等也没能为我加分。 以后要注意强化英语，学好ror并多动手。争取自己上一个有影响力的开源项目。&lt;/p&gt;
 </content>
    </entry>
    
