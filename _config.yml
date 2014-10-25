@@ -1,78 +1,12 @@
-markdown: redcarpet
-highlighter: pygments
-paginate: 8
-
-safe:  false
-
-#Site config
+# Site settings
 title: Ming's
-description: code, dream, life and more..
-keywords: ruby
-url: http://blog.yunnuy.com
-feed: /atom.xml
-favicon: http://jekyllrb.com/favicon.png
+email: feitian124@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  ming's blog. code, dream, life and more...
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blog.yunnuy.com" # the base hostname & protocol for your site
+twitter_username: feitian124
+github_username:  feitian124
 
-#Nav config
-nav:
-  - text: 首页
-    url: /index.html
-  - text: 分类目录
-    url: /categories.html
-  - text: 文章归档
-    url: /archives.html
-  - text: 联系我
-    url: /contact.html
-  - text: 友情链接
-    url: /links.html
-
-#Author config
-author:
-    name: ming
-    email: feitian124@gmail.com
-    imageLink: http://www.gravatar.com/avatar/c57225b6048481bc0dcd4e388dfcc99c?s=200
-    simpleIntro: 我是「ming」，观察思考实践，不断前行。
-    detailIntro:
-      <p>软件工程师, 开源爱好者, 不靠谱的经济观察员, 闲时喜欢玩玩吉他, 踢踢球. 心仍有大志, 资浅创业爱好者.</p>
-
-#Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
-follow:
-
-  - class: icon-weibo
-    url: http://weibo.com/feitian124
-  - class: icon-github-alt
-    url: http://github.com/feitian124
-  - class: icon-twitter
-    url: http://twitter.com/feitian124
-  - class: icon-google-plus
-    url: http://google.com/feitian124
-  - class: icon-rss
-    url: /atom.xml
-  #- class: icon-renren
-  #  url: http://renren.com
-
-#Links
-customLinks:
-  - item:
-    - text: 爱吉他
-      url: http://www.52jita.net
-    - text: 云麓.星城汇
-      url: http://www.yunnuy.com
-    message: My sites
-  - item:
-    - text: 掌心
-      url: http://www.zhanxin.info
-    message: Friends
-
-#googleAnaly, your id link UA-12345678-X
-googleAnaly:
-  config: true
-  id:
-
-#comment config
-disqus:
-  config: false
-  id:
-
-duoshuo:
-  config: false
-  id:
+# Build settings
+markdown: kramdown
