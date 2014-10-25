@@ -17,7 +17,7 @@ javascript是单线程的语言,很多事件处理需要用到回调,从而也�
 
 具体看代码:
 
-``` javascript
+{% highlight javascript %}
   /* --------------- call back codes, for example:
      loadImages(['1.gif', '2.gif', '3.gif']).done(function(images){
        alert(images.length);                     //alerts 3
@@ -48,6 +48,6 @@ javascript是单线程的语言,很多事件处理需要用到回调,从而也�
       }
     };
   }
-```
+{% endhighlight %}
 
 
