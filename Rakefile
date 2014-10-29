@@ -18,6 +18,8 @@ task :new, :title do |t, args|
 layout: post
 title: "TITLE"
 date: DATE
+categories: work
+tags:
 ---
 
 HTML
