@@ -1,25 +1,7 @@
-##[点我查看中文说明](https://github.com/dubuyuye/blog/blob/gh-pages/README_zh_CN.md)
+# 我的博客
 
-# Blog Address
+这是 ming 的个人博客, 地址 <http://blog.yunnuy.com/>, 欢迎访问.
 
-<http://blog.rainyalley.com/>
+## 鸣谢
 
-
-# Must Modify
-
-## 1.swiftype
-
-This service provides the on-site search function.
-
-Service address： <https://swiftype.com/>.
-
-After the setup is complete， you need to modify the `swiftype_searchId` in `_config.yml`.
-
-
-## 2.disqus
-
-This service provides the comment function.
-
-Service address： <https://disqus.com/>.
-
-After the setup is complete， you need to modify the `disqus_shortname` in `_config.yml`.
+博客主题来自 [rainyalley](https://github.com/dubuyuye/blog), 请喜欢参照原博主.
