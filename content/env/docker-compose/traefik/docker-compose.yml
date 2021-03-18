@@ -1,0 +1,73 @@
+version: '3'
+services:
+  traefik:
+    container_name: traefik
+    image: traefik:v2.3.4
+    restart: always
+    ports:
+      - 80:80
+      - 8080:8080
+      - 443:443
+    networks:
+      - traefik
+    command:
+      - "--global.sendanonymoususage=false"
+      - "--global.checknewversion=false"
+      - "--entrypoints.http.address=:80"
+      - "--entrypoints.https.address=:443"
+      - "--api=true"
+      - "--api.insecure=true"
+      - "--api.dashboard=true"
+      - "--api.debug=false"
+      - "--ping=true"
+      - "--log.level=warn"
+      - "--log.format=common"
+      - "--accesslog=false"
+      - "--providers.docker=true"
+      - "--providers.docker.watch=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--providers.docker.endpoint=unix:///var/run/docker.sock"
+      - "--providers.docker.swarmMode=false"
+      - "--providers.docker.useBindPortIP=false"
+      - "--providers.docker.network=traefik"
+      - "--providers.file=true"
+      - "--providers.file.watch=true"
+      - "--providers.file.directory=/etc/traefik/config"
+      - "--providers.file.debugloggeneratedtemplate=true"
+    volumes:
+      # 下面2行仅限标准的 Linux 环境, 将时区和宿主机的时间映射到容器内部，保障时间一致
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./config/:/etc/traefik/config/:ro
+      - ./ssl/:/data/ssl/:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      # 默认请求转发 https 端口
+      - "traefik.http.routers.traefik-dash-default.middlewares=https-redirect@file"
+      - "traefik.http.routers.traefik-dash-default.entrypoints=http"
+      - "traefik.http.routers.traefik-dash-default.rule=Host(`dashboard.guava.lab.com`)"
+      - "traefik.http.routers.traefik-dash-default.service=dashboard@internal"
+      # 处理网页
+      - "traefik.http.routers.traefik-dash-web.entrypoints=https"
+      - "traefik.http.routers.traefik-dash-web.rule=Host(`dashboard.guava.lab.com`) && PathPrefix(`/`)"
+      - "traefik.http.routers.traefik-dash-web.tls=true"
+      - "traefik.http.routers.traefik-dash-web.service=dashboard@internal"
+      # 处理接口
+      - "traefik.http.routers.traefik-dash-api.entrypoints=https"
+      - "traefik.http.routers.traefik-dash-api.rule=Host(`dashboard.guava.lab.com`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`))"
+      - "traefik.http.routers.traefik-dash-api.tls=true"
+      - "traefik.http.routers.traefik-dash-api.service=api@internal"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider --proxy off localhost:8080/ping || exit 1"]
+      interval: 3s
+      retries: 12
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+
+networks:
+  traefik:
+    external: true

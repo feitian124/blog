@@ -1,0 +1,4 @@
+docker-compose/redis/data
+
+docker-compose/gitea/data
+docker-compose/gitea/repositories

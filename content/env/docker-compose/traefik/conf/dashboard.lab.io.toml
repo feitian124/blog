@@ -1,0 +1,5 @@
+[http.middlewares.dash-compress.compress]
+[http.middlewares.dash-auth.basicAuth]
+  users = [
+    "test:$apr1$H6uskkkW$IgXLP6ewTrSuBkTrqE8wj/",
+  ]
