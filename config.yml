@@ -1,6 +1,6 @@
 baseURL: "https://feitian124.netlify.app/"
 title: Ming's Blog
-paginate: 5
+paginate: 10
 theme: PaperMod
 
 enableInlineShortcodes: true
