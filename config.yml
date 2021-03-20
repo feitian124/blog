@@ -34,38 +34,6 @@ languages:
                   url: categories/
                   weight: 10
 
-    zh:
-        languageName: "中文"
-        weight: 2
-        title: Ming的博客
-        profileMode:
-            enabled: true
-            title: Ming
-            # imageUrl: "#"
-            # imageTitle: my image
-            # imageWidth: 120
-            # imageHeight: 120
-            subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
-            buttons:
-                - name: Blog
-                  url: posts
-                - name: Tags
-                  url: tags
-        menu:
-            main:
-                - name: Archive
-                  url: archives/
-                  weight: 5
-                - name: Tags
-                  url: tags
-                  weight: 10
-                - name: Categories
-                  url: categories
-                  weight: 10
-                - name: Series
-                  url: series
-                  weight: 10
-
 outputs:
     home:
         - HTML
