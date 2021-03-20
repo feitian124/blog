@@ -37,10 +37,10 @@ languages:
     zh:
         languageName: "中文"
         weight: 2
-        title: PaperModL2
+        title: Ming的博客
         profileMode:
             enabled: true
-            title: PaperMod
+            title: Ming
             # imageUrl: "#"
             # imageTitle: my image
             # imageWidth: 120
@@ -74,9 +74,9 @@ outputs:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-    author: Theme PaperMod
-    # author: ["Me", "You"] # multiple authors
+    description: "有些无声话语，只有寻梦的人听得见"
+    # author: ["Me", "You"]， multiple authors
+    author: ming
     # dark, light, auto
     defaultTheme: auto
     # disableThemeToggle: true
@@ -92,7 +92,7 @@ params:
 
     profileMode:
         enabled: false
-        title: PaperMod
+        title: Ming
         imageUrl: "#"
         imageTitle: my image
         # imageWidth: 120
@@ -104,22 +104,16 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "PaperMod"
+        Title: "Ming的博客"
         Content: >
-            Welcome to demo of hugo's theme PaperMod.
-
-            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
-
-            - Do give a 🌟 on Github !
-
-            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+            欢迎大家来到我的博客，这里主要记录我工作和生活中的一些心得体会和想法，希望大家喜欢.
 
     socialIcons:
         - name: github
-          url: "https://github.com/adityatelange/hugo-PaperMod"
-        - name: KoFi
-          url: "https://ko-fi.com/adityatelange"
-        - name: RsS
+          url: "https://github.com/feitian124"
+        - name: twitter
+          url: "https://twitter.com/feitian124"
+        - name: Rss
           url: "index.xml"
 
     # label:
