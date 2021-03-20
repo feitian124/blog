@@ -1,4 +1,4 @@
-baseURL: "https://localhost:1313"
+baseURL: "https://feitian124.netlify.app/"
 title: Ming's Blog
 paginate: 5
 theme: PaperMod
