@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ember 开发中的几个小坑 2"
-date: 2014-12-05 19:47:57 +0800
+date: 2014-12-05 19:47:57
 categories: work
 tags:
 ---

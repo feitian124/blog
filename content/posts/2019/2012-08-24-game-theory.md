@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Game theory - 博弈论"
-date: 2012-08-24 23:31
+date: 2012-08-24 23:31:00
 comments: true
 categories: resources
 ---

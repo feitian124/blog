@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ubuntu 12.04 创建启动器"
-date: 2012-07-14 01:03
+date: 2012-07-14 01:03:00
 comments: true
 categories: work
 ---

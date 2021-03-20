@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "理解 CSRF 和 XSS 攻击"
-date: 2014-11-08 22:30:29 +0800
+date: 2014-11-08 22:30:29
 categories: work
 tags:
 ---

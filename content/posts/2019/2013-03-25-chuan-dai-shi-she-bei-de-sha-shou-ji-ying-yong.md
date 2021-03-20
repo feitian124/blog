@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "穿戴式设备的杀手级应用"
-date: 2013-03-25 18:52
+date: 2013-03-25 18:52:00
 comments: true
 categories: 
 ---

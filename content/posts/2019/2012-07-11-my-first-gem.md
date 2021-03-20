@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "my first gem"
-date: 2012-07-11 23:11
+date: 2012-07-11 23:11:00
 comments: true
 categories: work
 ---

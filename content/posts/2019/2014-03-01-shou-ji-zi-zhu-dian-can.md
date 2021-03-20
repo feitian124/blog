@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "手机自助点餐"
-date: 2014-03-01 19:18:02 +0800
+date: 2014-03-01 19:18:02
 comments: true
 categories: life 
 ---

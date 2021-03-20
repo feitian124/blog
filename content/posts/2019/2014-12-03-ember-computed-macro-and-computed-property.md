@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ember computed macro and computed property"
-date: 2014-12-03 18:30:25 +0800
+date: 2014-12-03 18:30:25
 categories: work
 tags:
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "highlight the current navigation"
-date: 2013-03-18 23:05
+date: 2013-03-18 23:05:00
 comments: true
 categories: 
 ---

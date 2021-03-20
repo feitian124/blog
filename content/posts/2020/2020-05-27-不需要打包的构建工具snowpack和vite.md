@@ -1,3 +1,8 @@
+---
+title: "不需要打包的构建工具snowpack和vite"
+date: 2020-05-26 20:00:00
+---
+
 关注 vue3 的人一定关注到尤雨溪的另一个开源项目 [vitejs](https://github.com/vitejs/vite), 
 它是一个不需打包的构建工具，开发时使用 `es module` 导入代码，生产环境用 rollup 构建。
 它 有一些显著的优势:

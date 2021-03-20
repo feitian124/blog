@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "create logo with inkscape"
-date: 2012-08-04 12:25
+date: 2012-08-04 12:25:00
 comments: true
 categories: resources
 ---

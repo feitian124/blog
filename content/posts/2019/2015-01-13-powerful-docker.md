@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "强大的 docker"
-date: 2015-01-13 20:19:01 +0800
+date: 2015-01-13 20:19:01
 categories: work
 tags:
 ---

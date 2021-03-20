@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ember 路由中几个常用方法的执行顺序"
-date: 2014-11-19 23:32:12 +0800
+date: 2014-11-19 23:32:12
 categories: work
 tags:
 ---

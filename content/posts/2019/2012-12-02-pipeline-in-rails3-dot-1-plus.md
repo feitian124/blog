@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "pipeline in rails3.1+"
-date: 2012-12-02 16:22
+date: 2012-12-02 16:22:00
 comments: true
 categories: rails
 ---

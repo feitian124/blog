@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ember学习笔记一"
-date: 2014-05-08 22:16:22 +0800
+date: 2014-05-08 22:16:22
 categories: work 
 ---
 

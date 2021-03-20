@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "rails guide学习笔记1"
-date: 2012-03-03 23:55
+date: 2012-03-03 23:55:00
 comments: true
 categories: work
 ---

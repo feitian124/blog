@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "面了几家公司"
-date: 2012-06-28 22:45
+date: 2012-06-28 22:45:00
 comments: true
 categories: life
 ---

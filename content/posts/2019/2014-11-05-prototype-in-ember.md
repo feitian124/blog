@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ember 中 extend 的小坑: prototype"
-date: 2014-11-05 22:28:29 +0800
+date: 2014-11-05 22:28:29
 categories: work
 tags:
 ---

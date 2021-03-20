@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "trouble shooting rake preview"
-date: 2013-03-05 23:27
+date: 2013-03-05 23:27:00
 comments: true
 categories: 
 ---

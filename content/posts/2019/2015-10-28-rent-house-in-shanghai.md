@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "rent house in shanghai"
-date: 2015-10-28 20:19:01 +0800
+date: 2015-10-28 20:19:01
 categories: life
 tags:
 ---

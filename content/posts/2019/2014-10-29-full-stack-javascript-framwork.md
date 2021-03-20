@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 纯 js 的 web 开发框架 MEEN
-date: 2014-10-29 09:35:51 +0800
+date: 2014-10-29 09:35:51
 categories: work
 tags: 
 ---

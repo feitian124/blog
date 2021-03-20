@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ie8警告: 长时间运行的脚本使得页面没有响应, 是否终止?"
-date: 2014-11-24 18:43:25 +0800
+date: 2014-11-24 18:43:25
 categories: work
 tags:
 ---
