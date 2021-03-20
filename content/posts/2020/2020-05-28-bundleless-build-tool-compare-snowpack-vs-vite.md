@@ -1,6 +1,6 @@
 ---
 title: "不需要打包的构建工具snowpack和vite"
-date: 2020-05-26 20:00:00
+date: 2020-05-28 20:00:00
 ---
 
 关注 vue3 的人一定关注到尤雨溪的另一个开源项目 [vitejs](https://github.com/vitejs/vite), 

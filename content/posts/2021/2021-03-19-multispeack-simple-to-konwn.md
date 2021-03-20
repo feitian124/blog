@@ -1,3 +1,8 @@
+---
+title: “multispeack 简单研究”
+date: 2021-03-19 08:00:57
+---
+
 ## multispeack 简单研究
 
 MultiSpeak Specification 是一个广泛用于北美企业和公用事业部门(如水电)的企业应用互联规范，帮助它们定义接口， 让不同供应商的软件可以不需额外开发接口就可以互联。
