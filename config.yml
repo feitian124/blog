@@ -1,4 +1,4 @@
-baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
+baseURL: "https://localhost:1313"
 title: Ming's Blog
 paginate: 5
 theme: PaperMod
@@ -151,6 +151,13 @@ params:
     #     threshold: 0.4
     #     minMatchCharLength: 0
     #     keys: ["title", "permalink", "summary", "content"]
+
+# try first to extract the value for .Date from the filename,
+# then it will look in front matter parameters date, publishDate and lastly lastmod.
+frontmatter:
+  date:
+    - ':filename'
+    - ':default'
 
 taxonomies:
     category: categories
