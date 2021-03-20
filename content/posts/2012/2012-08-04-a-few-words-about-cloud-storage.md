@@ -4,6 +4,7 @@ title: "云存储"
 date: 2012-08-04 15:33:00
 comments: true
 categories: resources
+tags: ["moment"]
 ---
 
 写博客有时想放一些图片，就想到了云储存。平常也关注了下，但没认真考察过。

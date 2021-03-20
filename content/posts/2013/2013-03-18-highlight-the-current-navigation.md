@@ -3,7 +3,6 @@ layout: post
 title: "highlight the current navigation"
 date: 2013-03-18 23:05:00
 comments: true
-categories: 
 ---
 
 Why do we need highlight the current navigation? Best pratice suggests that we should always indicate   

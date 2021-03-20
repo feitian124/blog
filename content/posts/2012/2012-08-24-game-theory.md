@@ -4,6 +4,7 @@ title: "Game theory - 博弈论"
 date: 2012-08-24 23:31:00
 comments: true
 categories: resources
+tags: ["moment"]
 ---
  
 游戏中双方为了达到各自的目标和利益，各方必须考虑对手的各种可能的行动方案，并力图选取对自己最为有利或最为合理的方案。

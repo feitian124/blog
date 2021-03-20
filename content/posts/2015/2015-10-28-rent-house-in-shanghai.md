@@ -1,12 +1,11 @@
 ---
-layout: post
 title: "rent house in shanghai"
 date: 2015-10-28 20:19:01
-categories: life
-tags:
+tags: ["上海"]
+categories: ["life"]
 ---
 
-# 上海租房
+## 上海租房
 
 朋友在"延安西路 1118 号" 附近上班, 现在租的房子在 "昌李东路浦三路" 附近, 现在从家到公司:
 

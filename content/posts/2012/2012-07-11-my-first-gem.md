@@ -4,6 +4,7 @@ title: "my first gem"
 date: 2012-07-11 23:11:00
 comments: true
 categories: work
+tags: ["rails"]
 ---
 
 学了大半年的rails，却还没写过自己到gem，我这个吉他新手，还老需要去翻教材，找一些和弦是如何按的，

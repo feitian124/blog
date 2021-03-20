@@ -1,6 +1,9 @@
 ---
 title: "spring官网推荐的学习项目sagan"
 date: 2020-05-26 20:00:00
+tags: ["springboot", "java"]
+categories: ["work"]
+series: ["研究"]
 ---
 
 spring 系框架如 spring， springboot， springcloud 等已成为 java 开发的标配，笔者也是 spring 系框架的多年用户，它们遵循统一的原则，原理清晰，实现优雅， 更新及时，很多最佳实践慢慢都沉淀为规则，为广大 javaer 提供了很多开箱即用的便利，大大降低开发成本。

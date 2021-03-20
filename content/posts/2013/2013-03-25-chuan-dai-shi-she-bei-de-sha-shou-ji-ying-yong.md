@@ -3,7 +3,8 @@ layout: post
 title: "穿戴式设备的杀手级应用"
 date: 2013-03-25 18:52:00
 comments: true
-categories: 
+tags: ["moment"]
+categories: ["life"]
 ---
 
 现在各大厂商对穿戴式设备的投资如火如荼，这也符合智能能便携设备的越小，越轻，越方便携带的特性。  

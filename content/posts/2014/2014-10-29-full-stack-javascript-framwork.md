@@ -2,8 +2,6 @@
 layout: post
 title: 纯 js 的 web 开发框架 MEEN
 date: 2014-10-29 09:35:51
-categories: work
-tags: 
 ---
 
 做 `ember` 开发有一段时间了, 被它 弄的焦头烂额, 但渐渐对纯 `js` 的 `web` 解决方案产生了兴趣. 

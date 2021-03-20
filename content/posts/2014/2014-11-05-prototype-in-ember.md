@@ -2,8 +2,6 @@
 layout: post
 title: "ember 中 extend 的小坑: prototype"
 date: 2014-11-05 22:28:29
-categories: work
-tags:
 ---
 
 ember 中我们用 `extend` 来扩展一个类, 它的工作机制非常类似 prototype. 开发中我几次碰到下面这个问题,

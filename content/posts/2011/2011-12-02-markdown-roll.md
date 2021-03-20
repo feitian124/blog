@@ -3,8 +3,9 @@ layout: post
 title: markdown 语法学习
 date: 2011-12-02 20:00:00
 description: Markdown 语法的一些知识点的记录，例如如何写标题，写列表，写 table 等。
-keywords: Markdown
-category: work
+tags: ["markdown"]
+categories: ["work"]
+series: ["研究"]
 ---
 ###h 标题的写法
         #h1

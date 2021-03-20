@@ -1,6 +1,8 @@
 ---
 title: "数据库变更管理工具 flyway"
 date: 2020-10-18 23:26:08
+tags: ["flyway"]
+categories: ["work"]
 ---
 
 ## Flyway的工作模式

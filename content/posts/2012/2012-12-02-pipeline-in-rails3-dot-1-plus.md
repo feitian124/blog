@@ -3,7 +3,6 @@ layout: post
 title: "pipeline in rails3.1+"
 date: 2012-12-02 16:22:00
 comments: true
-categories: rails
 ---
  pipeline 是rails3.1后引进的一个很有用的特性，它可以：
  1. 将你的 js，css 等静态资源 compile 到一个文件，减少了浏览器到服务器取这些资源时的连接数量；

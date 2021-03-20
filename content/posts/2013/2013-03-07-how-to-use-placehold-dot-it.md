@@ -3,7 +3,6 @@ layout: post
 title: "How to use PLACEHOLD.IT"
 date: 2013-03-07 22:24:00
 comments: true
-categories: 
 ---
 
 Do you ever heard of `PLACEHOLD.IT` ?  

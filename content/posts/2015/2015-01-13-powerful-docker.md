@@ -2,8 +2,8 @@
 layout: post
 title: "强大的 docker"
 date: 2015-01-13 20:19:01
-categories: work
-tags:
+tags: ["docker"]
+categories: ["work"]
 ---
 
 做过多年软件开发的人一定被各种依赖折磨过. 

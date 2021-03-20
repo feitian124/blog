@@ -1,6 +1,9 @@
 ---
 title: "Springboot项目的nginx_https配置研究"
 date: 2020-09-24 01:22:06
+tags: ["nginx", "springboot", "https"]
+categories: ["work"]
+series: ["研究"]
 ---
 
 近期研究了一下 springboot jsp web 项目的 https 部属，分享一下成果，代码见

@@ -1,6 +1,9 @@
 ---
 title: 微服务:雄伟巨石可以成为城堡
 date: 2020-11-04 09:15:08
+tags: ["微服务", "架构"]
+categories: ["work"]
+series: ["研究"]
 ---
 
 DHH 在 2020.04.08 发表了一篇最新博客 “The Majestic Monolith can become The Citadel”，继续讨论对微服务的一点看法，提出了一种与微服务相对的 “城堡” 模式。在推上也引发了不少关注，搜关键字 “The Majestic Monolith” 就能看到很多。这是原文链接：https://m.signalvnoise.com/the-majestic-monolith-can-become-the-citadel/

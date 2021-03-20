@@ -1,6 +1,8 @@
 ---
 title: "分布式集群Session共享"
 date: 2018-03-03 23:38:08
+tags: ["devops", "shell"]
+categories: ["work"]
 ---
 
 ## 解决方法

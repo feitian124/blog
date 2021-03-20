@@ -3,7 +3,8 @@ layout: post
 title: "手机自助点餐"
 date: 2014-03-01 19:18:02
 comments: true
-categories: life 
+tags: ["moment"]
+categories: ["life"]
 ---
 
 小白领 A和女朋友B逛街，肚子饿了然后掏出手机，团了一家附近的餐厅吃饭。

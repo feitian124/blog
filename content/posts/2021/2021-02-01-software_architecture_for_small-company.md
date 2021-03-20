@@ -1,6 +1,9 @@
 ---
 title: "2021年小公司技术架构选型"
 date: 2021-02-01 23:26:08
+tags: ["go", "java", "架构"]
+categories: ["work"]
+series: ["研究"]
 ---
 
 # 企业web应用技术讨论

@@ -3,7 +3,7 @@ layout: post
 title: "javascript callback(回调)"
 date: 2014-05-27 19:18:02
 comments: true
-categories: work 
+tags: ["js"]
 ---
 
 最近在做前端开发工作,所以写了不少javascript代码.一直对javascript有成见,从前觉得就是浏览器里面做做跑马灯效果,做做验证啊等不严肃的语言. 现在看来我错了,javascript社区很活跃, 从jquery到前端mvc,到后端nodejs, grunt等, javascript的威力越来越强大.

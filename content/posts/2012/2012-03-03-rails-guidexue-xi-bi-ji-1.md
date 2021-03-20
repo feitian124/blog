@@ -3,7 +3,8 @@ layout: post
 title: "rails guide学习笔记1"
 date: 2012-03-03 23:55:00
 comments: true
-categories: work
+tags: ["rails"]
+categories: ["work"]
 ---
 
 学习rails也有2，3个星期了。虽然有javaEE的使用经验，也较系统的提前学习了ruby，

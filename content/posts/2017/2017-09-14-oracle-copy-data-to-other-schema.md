@@ -1,6 +1,9 @@
 ---
 title: "oracle 复制数据到其他 schema"
 date: 2017.09.14 14:06:17
+tags: ["oracle"]
+categories: ["work"]
+series: ["database"]
 ---
 
 开发中经常遇到复制数据的需求，比如有开发环境，测试环境，模拟生产环境等；又或者同一项目服务不同的客户。

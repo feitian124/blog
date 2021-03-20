@@ -2,8 +2,6 @@
 layout: post
 title: "ember 开发中的几个小坑"
 date: 2014-11-10 23:19:50
-categories: work
-tags:
 ---
 
 ### 不能在 ember 项目中任意创建目录

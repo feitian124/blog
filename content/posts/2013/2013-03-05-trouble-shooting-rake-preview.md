@@ -3,7 +3,6 @@ layout: post
 title: "trouble shooting rake preview"
 date: 2013-03-05 23:27:00
 comments: true
-categories: 
 ---
 
 When i cloned one repo to my local disk and try to `rake clean-> rake install[theme-name]-->rake preview`,

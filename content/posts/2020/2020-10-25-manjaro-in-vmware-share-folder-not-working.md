@@ -1,8 +1,11 @@
 ---
 title: "vmware中manjaro与宿主机window10不共享目录的解决办法"
 date: 2020-10-25 12:53:10
+tags: ["manjaro", "vmware"]
+categories: ["work"]
+
 ---
-买了[新电脑 r7000](https://www.topcoder.club/2020/06/618-buy-computer-for-coding)后，我在 VMware 中装了 manjaro 作为日常开发，
+买了[新电脑 r7000](2020-06-05-618-buy-computer-for-coding.md)后，我在 VMware 中装了 manjaro 作为日常开发，
 这样我即可以同时使用 windows 和 linux 下面的软件，挺好，满足我的需求。
 
 但碰到一个问题，在 VMware 设置了共享目录不工作，网上有人说是原生 vmware-tools 对 manjaro 支持不好，需要打 [patch](https://github.com/rasa/vmware-tools-patches)；也有人说用自带的 open-vm-tools 即可，但我试了各种方案都不行。最后只能用在 windows 中用 ftp 软件往 manjaro 中读写文件。

@@ -4,6 +4,7 @@ title: "big data and cloud"
 date: 2012-08-23 23:31:00
 comments: true
 categories: resources
+tags: ["moment"]
 ---
 
 今天公司的town hall是介绍了一些新技术及公司引入的情况。有钱好办事，公司在这方面还是挺投入的。

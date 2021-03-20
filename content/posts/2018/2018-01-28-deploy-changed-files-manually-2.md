@@ -1,6 +1,8 @@
 ---
 title: "部署个别变动文件到服务器2"
 date: 2018-01-28 22:16:08
+tags: ["devops", "shell"]
+categories: ["work"]
 ---
 
 在上一篇文章中, 我写了基于 svn 的将变动按 war 包目录提取的文章 https://www.jianshu.com/p/a2ec55f0da0a ,

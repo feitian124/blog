@@ -2,8 +2,6 @@
 layout: post
 title: "ember 开发中的几个小坑 2"
 date: 2014-12-05 19:47:57
-categories: work
-tags:
 ---
 
 1. 数组的 addObjects 方法不能对 undefined 的使用.

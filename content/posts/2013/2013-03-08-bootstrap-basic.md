@@ -3,7 +3,6 @@ layout: post
 title: "Bootstrap Basic"
 date: 2013-03-08 23:25:00
 comments: true
-categories: 
 ---
 
 According to the [offical website](http://twitter.github.com/bootstrap/index.html): 

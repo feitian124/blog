@@ -2,8 +2,8 @@
 layout: post
 title: "开源社区的精神, 坚持与人性"
 date: 2014-12-08 17:38:08
-categories: life
-tags:
+tags: ["moment"]
+categories: ["life"]
 ---
 
 用了一段时间的 nodejs 了, 今天意外发现有了一个新repo [iojs](https://github.com/iojs/io.js), 了解了一下事情的前因后果, 也谈谈开源社区的精神, 坚持与人性.

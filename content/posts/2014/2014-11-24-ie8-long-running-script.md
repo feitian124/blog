@@ -2,8 +2,6 @@
 layout: post
 title: "ie8警告: 长时间运行的脚本使得页面没有响应, 是否终止?"
 date: 2014-11-24 18:43:25
-categories: work
-tags:
 ---
 
 今天测试项目在 ie8 下面的表现, 出现了如下警告:

@@ -1,6 +1,8 @@
 ---
 title: "一周年纪念"
 date: 2016-10-15 20:58:55
+tags: ["moment"]
+categories: ["life"]
 ---
 
 ![月光.jpg](http://upload-images.jianshu.io/upload_images/7460010-d24885a2a97c6b12.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

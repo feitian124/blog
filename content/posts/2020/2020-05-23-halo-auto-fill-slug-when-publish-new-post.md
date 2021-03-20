@@ -1,6 +1,8 @@
 ---
 title: "halo发布文章自动输入slug"
 date: 2020-05-23 20:00:00
+tags: ["halo", "java", "js"]
+categories: ["work"]
 ---
 
 halo 发布文章时，需输入 slug，即固定链接地址，有利于搜索引擎收录和提升权重。而中文出现在 url 中并不友好，

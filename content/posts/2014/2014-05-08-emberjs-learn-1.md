@@ -2,7 +2,6 @@
 layout: post
 title: "ember学习笔记一"
 date: 2014-05-08 22:16:22
-categories: work 
 ---
 
 换了个做web的小公司,找回不少工作的激情。不但有心仪的 ruby on rails，还有很火的前端 MVC 框架 emberjs，感觉立马进化到了21世纪。

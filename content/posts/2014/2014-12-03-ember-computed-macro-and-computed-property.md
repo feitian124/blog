@@ -2,8 +2,6 @@
 layout: post
 title: "ember computed macro and computed property"
 date: 2014-12-03 18:30:25
-categories: work
-tags:
 ---
 
 最近项目在 ie8 下面碰到性能问题, 费了近一个星期, 终于弄好了.

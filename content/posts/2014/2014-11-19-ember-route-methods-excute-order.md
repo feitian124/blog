@@ -2,8 +2,6 @@
 layout: post
 title: "ember 路由中几个常用方法的执行顺序"
 date: 2014-11-19 23:32:12
-categories: work
-tags:
 ---
 
 ember 中 route 指明了你应用的状态, 也提供了几个很常用的方法用来切换状态. 其中最常用的有三个钩子方法:

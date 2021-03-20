@@ -1,6 +1,8 @@
 ---
 title: "java web开放中碰到的三个问题"
 date: 2019-07-05 20:00:00
+tags: ["java", "web", "mysql"]
+categories: ["work"]
 ---
 
 # java web开放中碰到的三个问题

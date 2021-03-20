@@ -1,6 +1,8 @@
 ---
 title: "git 读取对象 XXX 失败: 错误的消息"
 date: 2020-11-05 08:00:57
+tags: ["git", "devops"]
+categories: ["work"]
 ---
 
 今天早早来到办公室，准备大干一场，谁知道git出现问题。

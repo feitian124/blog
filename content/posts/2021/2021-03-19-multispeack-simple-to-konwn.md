@@ -1,6 +1,10 @@
 ---
 title: multispeack 简单研究
 date: 2021-03-19 08:00:57
+description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+tags: ["multispeack", "架构"]
+categories: ["work"]
+series: ["研究"]
 ---
 
 ## multispeack 简单研究
