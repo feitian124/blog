@@ -2,7 +2,7 @@
 layout: post
 title: "spring 注入私有属性"
 date: 2016-03-02 20:19:01
-categories: work
+categories: ["work"]
 ---
 
 # spring 可以注入私有属性

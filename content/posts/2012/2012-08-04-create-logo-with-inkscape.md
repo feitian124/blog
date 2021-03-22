@@ -3,7 +3,7 @@ layout: post
 title: "create logo with inkscape"
 date: 2012-08-04 12:25:00
 comments: true
-categories: resources
+categories: ["resources"]
 ---
 
    最近想为我的域名www.yunnuy.com做一个小logo，于是到网上找了个画矢量图的工具。由于我用的unbutu，在软件中心

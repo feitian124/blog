@@ -3,7 +3,7 @@ layout: post
 title: "big data and cloud"
 date: 2012-08-23 23:31:00
 comments: true
-categories: resources
+categories: ["resources"]
 tags: ["moment"]
 ---
 
