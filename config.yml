@@ -2,6 +2,7 @@ baseURL: "https://feitian124.netlify.app/"
 title: Ming's Blog
 paginate: 10
 theme: PaperMod
+defaultContentLanguage: "zh"
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -16,8 +17,8 @@ minify:
     # minifyOutput: true
 
 languages:
-    en:
-        languageName: "English"
+    zh:
+        languageName: "Chinese"
         weight: 1
         menu:
             main:
