@@ -1,5 +1,5 @@
 baseURL: "https://feitian124.netlify.app/"
-title: Ming's Blog
+title: Ming 的博客
 paginate: 10
 theme: PaperMod
 defaultContentLanguage: "zh"
@@ -22,18 +22,18 @@ languages:
         weight: 1
         menu:
             main:
-                - name: Archive
+                - name: 所有文章
                   url: archives
                   weight: 5
-                - name: Search
-                  url: search/
-                  weight: 10
-                - name: Tags
+                - name: 标签
                   url: tags/
-                  weight: 10
-                - name: Categories
+                  weight: 6
+                - name: 分类
                   url: categories/
-                  weight: 10
+                  weight: 7
+                - name: 搜索
+                  url: search/
+                  weight: 9
 
 outputs:
     home:
