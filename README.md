@@ -14,14 +14,14 @@ Wish you a good-looking profile README!
 
 -->
 
-<h2 align="center">Hi there, 👋 I'm Ming! 😎</h2>
+<h2 align="center">Hi there,  I'm Ming! 👋</h2>
 
 <h4 align="center">I am passionate about open source and giving back to others.</h4>
 
 -   :hammer_and_pick: java / go / typescript, and also ruby(on rails), shell, sql
--   :package: Building some project but not very useful until now
--   :pencil2: Manjaro / Oh My Zsh / Vim / Vscode
--   :man: Blog: [p2y.top](https://p2y.top/)
+-   :package: building some projects but not very useful until now
+-   :pencil2: manjaro / Oh My Zsh / Vim / Vscode
+-   :man: blog: [p2y.top](https://p2y.top/)
 
 ---
 
