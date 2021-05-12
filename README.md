@@ -18,12 +18,10 @@ Wish you a good-looking profile README!
 
 <h4 align="center">I am passionate about open source and giving back to others.</h4>
 
-<div align="center">
 -   :hammer_and_pick: java / go / typescript, and also ruby(on rails), shell, sql
 -   :package: Building some project but not very useful until now
 -   :pencil2: Manjaro / Oh My Zsh / Vim / Vscode
 -   :man: Blog: [p2y.top](https://p2y.top/)
-</div>
 
 ---
 
