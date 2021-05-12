@@ -1,13 +1,29 @@
+<!--
+
+Thank you if you like this profile README!
+
+You can use it as a reference, but DO NOT copy all of this and create your profile based on it.
+
+It is very common that you forget to change some information and leave mine in your profile.
+
+You can find other awesome profile READMEs at https://github.com/abhisheknaiidu/awesome-github-profile-readme. 
+
+Wish you a good-looking profile README!
+
+                                   —— feitian124 (https://github.com/feitian124)
+
+-->
 
 <h2 align="center">Hi there, 👋 I'm Ming! 😎</h2>
 
 <h4 align="center">I am passionate about open source and giving back to others.</h4>
 
-<p align="center">
-  my blog <a href="https://p2y.top">
-    p2y.top
-  </a>
-</p>
+<div align="center">
+-   :hammer_and_pick: java / go / typescript, and also ruby(on rails), shell, sql
+-   :package: Building some project but not very useful until now
+-   :pencil2: Manjaro / Oh My Zsh / Vim / Vscode
+-   :man: Blog: [p2y.top](https://p2y.top/)
+</div>
 
 ---
 
