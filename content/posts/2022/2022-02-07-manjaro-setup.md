@@ -81,6 +81,14 @@ yay -S goland goland-jre
 yay -S intellij-idea-ultimate-edition intellij-idea-ultimate-edition-jre
 ```
 
+## nodejs
+
+```sh
+sudo pacman -S nvm
+echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc
+nvm install --lts
+```
+
 ## 参考
 
 - [Manjaro-KDE安装配置全攻略](https://zhuanlan.zhihu.com/p/114296129)
