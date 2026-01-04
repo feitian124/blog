@@ -2,22 +2,30 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "./slugify";
 import postFilter from "./postFilter";
 
-interface Tag {
-  tag: string;
-  tagName: string;
-}
-
 const getUniqueTags = (posts: CollectionEntry<"blog">[]) => {
-  const tags: Tag[] = posts
-    .filter(postFilter)
-    .flatMap(post => post.data.tags)
-    .map(tag => ({ tag: slugifyStr(tag), tagName: tag }))
-    .filter(
-      (value, index, self) =>
-        self.findIndex(tag => tag.tag === value.tag) === index
-    )
-    .sort((tagA, tagB) => tagA.tag.localeCompare(tagB.tag));
-  return tags;
+  const filteredPosts = posts.filter(postFilter);
+
+  // 使用 Map 一次遍历完成去重和计数
+  const tagMap = new Map<string, { tagName: string; count: number }>();
+
+  for (const post of filteredPosts) {
+    for (const tagName of post.data.tags) {
+      const tag = slugifyStr(tagName);
+      const existing = tagMap.get(tag);
+      if (existing) {
+        existing.count++;
+      } else {
+        tagMap.set(tag, { tagName, count: 1 });
+      }
+    }
+  }
+
+  // 转换为数组并排序
+  return Array.from(tagMap, ([tag, { tagName, count }]) => ({
+    tag,
+    tagName,
+    count,
+  })).sort((a, b) => a.tag.localeCompare(b.tag));
 };
 
 export default getUniqueTags;
