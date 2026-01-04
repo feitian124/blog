@@ -21,3 +21,21 @@ export const SITE = {
   lang: "en", // html lang code. Set this empty and default will be "en"
   timezone: "Asia/Shanghai", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 } as const;
+
+// Giscus comment system configuration
+// Get these values from https://giscus.app
+export const GISCUS = {
+  enabled: true,
+  repo: "feitian124/blog", // Replace with your GitHub username/repo
+  repoId: "MDEwOlJlcG9zaXRvcnk0ODg0NjQ0", // Get from https://giscus.app
+  category: "Announcements", // Recommended: "Announcements"
+  categoryId: "DIC_kwDOAEqIpM4C0jh4", // Get from https://giscus.app
+  mapping: "pathname", // "pathname" | "url" | "title" | "og:title"
+  strict: "0", // "0" | "1"
+  reactionsEnabled: "1", // "0" | "1"
+  emitMetadata: "0", // "0" | "1"
+  inputPosition: "top", // "top" | "bottom"
+  lightTheme: "light", // Giscus light theme
+  darkTheme: "dark", // Giscus dark theme
+  lang: "zh-CN", // Language
+} as const;
