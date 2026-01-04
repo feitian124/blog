@@ -59,7 +59,7 @@ function generateFrontmatter(title: string): string {
   const isoDate = new Date().toISOString();
   return `---
 title: "${title}"
-description: ""
+description: "${title}"
 pubDatetime: ${isoDate}
 tags: []
 ---
@@ -70,20 +70,30 @@ tags: []
 }
 
 async function main(): Promise<void> {
-  // Ask for post title
-  const response = await prompts({
-    type: "text",
-    name: "title",
-    message: "Enter post title:",
-    validate: (value: string) => (value.trim() ? true : "Title cannot be empty"),
-  });
+  // Get title from command line args or prompt
+  const args = process.argv.slice(2);
+  let title: string;
 
-  if (!response.title) {
-    console.log("Post creation cancelled");
-    process.exit(0);
+  if (args.length > 0) {
+    // Use command line argument as title
+    title = args.join(" ").trim();
+  } else {
+    // Ask for post title interactively
+    const response = await prompts({
+      type: "text",
+      name: "title",
+      message: "Enter post title:",
+      validate: (value: string) =>
+        value.trim() ? true : "Title cannot be empty",
+    });
+
+    if (!response.title) {
+      console.log("Post creation cancelled");
+      process.exit(0);
+    }
+    title = (response.title as string).trim();
   }
 
-  const title = (response.title as string).trim();
   const slug = toSlug(title);
   const { year, dateStr } = getDateInfo();
 
