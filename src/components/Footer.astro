@@ -3,6 +3,15 @@ import Hr from "./Hr.astro";
 import Socials from "./Socials.astro";
 
 const currentYear = new Date().getFullYear();
+const buildTime = new Date().toLocaleString('zh-CN', { 
+  year: 'numeric', 
+  month: '2-digit', 
+  day: '2-digit', 
+  hour: '2-digit', 
+  minute: '2-digit', 
+  second: '2-digit',
+  hour12: false 
+});
 
 export interface Props {
   noMarginTop?: boolean;
@@ -22,5 +31,8 @@ const { noMarginTop = false } = Astro.props;
       <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
       <span>All rights reserved.</span>
     </div>
+  </div>
+  <div class="pb-4 text-center text-sm text-skin-base opacity-70">
+    <span>Last updated: {buildTime}</span>
   </div>
 </footer>

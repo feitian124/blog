@@ -1,0 +1,7 @@
+{
+  "name": "feitian124-blog",
+  "compatibility_date": "2026-01-01", // Update to the day you deploy
+  "assets": {
+    "directory": "./dist",
+  }
+}
