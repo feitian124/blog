@@ -28,3 +28,7 @@ pnpm-debug.log*
 public/pagefind
 # Localflare generated files
 .localflare/
+
+.wrangler/
+
+.dev.vars

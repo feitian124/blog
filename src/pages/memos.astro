@@ -1,0 +1,189 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+
+export const prerender = false;
+
+const MEMOS_PER_PAGE = 20;
+
+// Get current page from URL params
+const url = new URL(Astro.request.url);
+const currentPage = Math.max(1, parseInt(url.searchParams.get('page') || '1'));
+
+let memos = [];
+let totalMemos = 0;
+let totalPages = 1;
+
+try {
+  const db = Astro.locals.runtime.env.DB;
+  
+  // Get total count
+  const countResult = await db.prepare("SELECT COUNT(*) as count FROM memos").first();
+  totalMemos = countResult.count || 0;
+  totalPages = Math.ceil(totalMemos / MEMOS_PER_PAGE);
+  
+  // Get paginated memos
+  const offset = (currentPage - 1) * MEMOS_PER_PAGE;
+  const result = await db.prepare(
+    "SELECT * FROM memos ORDER BY created_at DESC LIMIT ? OFFSET ?"
+  ).bind(MEMOS_PER_PAGE, offset).all();
+  
+  memos = result.results;
+} catch (e) {
+  console.error("Error fetching memos:", e);
+}
+---
+
+<Layout title={`Memos | ${SITE.title}`}>
+  <Header />
+  <main class="mx-auto w-full max-w-app px-4 pb-4">
+    <p class="mt-6 mb-4 italic text-skin-base opacity-80">My random thoughts and snippets.</p>
+    <!-- New Memo Form -->
+    <form id="memo-form" class="mb-6 space-y-2">
+      <textarea
+        id="memo-content"
+        name="content"
+        rows="2"
+        class="w-full rounded-md border border-skin-line bg-black/5 dark:bg-white/5 px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/20"
+        placeholder="What's on your mind?"
+        required
+      ></textarea>
+      <div class="flex items-center gap-2">
+        <input
+          type="text"
+          id="api-key"
+          name="apiKey"
+          class="flex-1 rounded-md border border-skin-line bg-black/5 dark:bg-white/5 px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/20"
+          placeholder="Publish Code"
+          required
+        />
+        <button
+          type="submit"
+          class="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent/90 disabled:opacity-50"
+        >
+          Post
+        </button>
+      </div>
+      <p id="form-message" class="text-sm"></p>
+    </form>
+
+    <!-- Memos List -->
+    <div id="memos-list" class="space-y-3">
+      {memos.length > 0 ? (
+        memos.map((memo: any) => (
+          <div class="rounded border border-skin-line px-3 py-2">
+            <div class="text-sm whitespace-pre-wrap">
+              {memo.content}
+            </div>
+            <div class="mt-1 text-xs text-skin-base opacity-60">
+              {new Date(memo.created_at).toLocaleString()}
+            </div>
+          </div>
+        ))
+      ) : (
+        <p class="text-center italic text-sm">No memos yet.</p>
+      )}
+    </div>
+
+    <!-- Pagination -->
+    {totalPages > 1 && (
+      <nav class="mt-8 flex items-center justify-center gap-2" aria-label="Pagination">
+        {currentPage > 1 ? (
+          <a
+            href={`/memos?page=${currentPage - 1}`}
+            class="rounded-md border border-skin-line px-3 py-2 text-sm font-medium transition-colors hover:bg-skin-fill hover:text-accent"
+          >
+            ← Prev
+          </a>
+        ) : (
+          <span class="rounded-md border border-skin-line px-3 py-2 text-sm font-medium opacity-50 cursor-not-allowed">
+            ← Prev
+          </span>
+        )}
+
+        <span class="px-3 py-2 text-sm">
+          Page {currentPage} of {totalPages}
+        </span>
+
+        {currentPage < totalPages ? (
+          <a
+            href={`/memos?page=${currentPage + 1}`}
+            class="rounded-md border border-skin-line px-3 py-2 text-sm font-medium transition-colors hover:bg-skin-fill hover:text-accent"
+          >
+            Next →
+          </a>
+        ) : (
+          <span class="rounded-md border border-skin-line px-3 py-2 text-sm font-medium opacity-50 cursor-not-allowed">
+            Next →
+          </span>
+        )}
+      </nav>
+    )}
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const form = document.getElementById('memo-form') as HTMLFormElement;
+    const contentInput = document.getElementById('memo-content') as HTMLTextAreaElement;
+    const apiKeyInput = document.getElementById('api-key') as HTMLInputElement;
+    const messageEl = document.getElementById('form-message') as HTMLParagraphElement;
+
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const content = contentInput.value.trim();
+      const apiKey = apiKeyInput.value.trim();
+      
+      if (!content || !apiKey) {
+        showMessage('Please fill in all fields', 'error');
+        return;
+      }
+
+      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Posting...';
+
+      try {
+        const response = await fetch('/api/memos', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`
+          },
+          body: JSON.stringify({ content })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          showMessage('Memo posted successfully! Refreshing...', 'success');
+          contentInput.value = '';
+          // Keep API key and refresh page after a short delay
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
+        } else {
+          showMessage(data.error || 'Failed to post memo', 'error');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Post';
+        }
+      } catch (error) {
+        console.error('Error posting memo:', error);
+        showMessage('An error occurred. Please try again.', 'error');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Post';
+      }
+    });
+
+    function showMessage(text: string, type: 'success' | 'error') {
+      messageEl.textContent = text;
+      messageEl.className = `text-sm ${type === 'success' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`;
+    }
+  });
+</script>

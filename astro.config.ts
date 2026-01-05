@@ -10,6 +10,7 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -43,6 +44,11 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
+    build: {
+      rollupOptions: {
+        external: ["@resvg/resvg-js"],
+      },
+    },
   },
   image: {
     responsiveStyles: true,
@@ -60,4 +66,8 @@ export default defineConfig({
   experimental: {
     preserveScriptOrder: true,
   },
+  adapter: cloudflare({
+    imageService: "compile",
+  }),
+  output: "static",
 });

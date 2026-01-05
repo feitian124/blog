@@ -1,7 +1,14 @@
 {
-  "name": "feitian124-blog",
-  "compatibility_date": "2026-01-01", // Update to the day you deploy
-  "assets": {
-    "directory": "./dist",
-  }
+	"name": "feitian124-blog",
+	"compatibility_date": "2026-01-01", // Update to the day you deploy
+	"assets": {
+		"directory": "./dist",
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "my-memos-db",
+			"database_id": "0742d519-bdfa-4192-b6f9-7bec86b844a9"
+		}
+	]
 }
