@@ -22,6 +22,8 @@ export const SITE = {
   timezone: "Asia/Shanghai", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 } as const;
 
+export const BLOG_PATH = "src/data/blog";
+
 // Giscus comment system configuration
 // Get these values from https://giscus.app
 export const GISCUS = {
