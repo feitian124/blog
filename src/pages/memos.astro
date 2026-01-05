@@ -153,10 +153,9 @@ try {
         const response = await fetch('/api/memos', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`
+            'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ content })
+          body: JSON.stringify({ content, apiKey })
         });
 
         const data = await response.json();
