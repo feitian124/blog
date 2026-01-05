@@ -8,7 +8,14 @@ export const POST: APIRoute = async ({ request, locals }) => {
     const { content, apiKey: clientApiKey } = body;
     const serverApiKey = locals.runtime.env.MEMO_API_KEY;
 
-    if (!serverApiKey || clientApiKey !== serverApiKey) {
+    if (!serverApiKey) {
+      return new Response(JSON.stringify({ error: "Server API key not configured" }), {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    if (clientApiKey !== serverApiKey) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
         status: 401,
         headers: { "Content-Type": "application/json" },
