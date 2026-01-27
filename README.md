@@ -41,6 +41,13 @@ npx wrangler pages deploy dist
 MEMO_API_KEY=your-api-key
 ```
 
+### 图片尺寸优化
+
+```bash
+# 压缩 jpg 质量到 70%
+jpegoptim --max=70 *.jpg
+```
+
 ## 感谢
 
 - Astro: https://astro.build/

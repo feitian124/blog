@@ -1,0 +1,136 @@
+---
+title: "install shellclash in redmi ax6000"
+description: "install shellclash in redmi ax6000"
+pubDatetime: 2026-01-27T14:14:57.073Z
+tags: []
+---
+
+import { Image } from 'astro:assets';
+import ax6000Xianyu from '@/assets/images/2026/ax6000_xianyu.jpg';
+import shellclashCmd from '@/assets/images/2026/shellclash_cmd.jpg';
+import shellclashDashboard from '@/assets/images/2026/shellclash_dashboard.jpg';
+
+# install shellclash in redmi ax6000
+
+最近被一个讨厌的网络问题困扰了，就是在 wsl2 里面使用 antigravity 时，经常会 block 很久，加载模型列表加载不出来，即使 clash 开了 tun 模式还是如此。
+研究了不少资料，大概意思是有些进程运行在 wsl2 里面，有些进程运行在 windows 里面，即使用了 tun 模式也会有些奇怪的问题。
+
+然后突然想到了我的红米 ax6000 是可以刷机 openwrt 的，上面也可以安装 clash 的，干脆就把 clash 搬到路由器上运行好了。
+其实我之前也折腾过，不过是安装的 [shellclash](https://github.com/juewuy/ShellCrash),
+当时不知道是我哪里操作不对，还是我的这台路由器哪里有问题，装上后它经常重启，后来就放弃了。
+
+几年过去了，我决定再次试一下。本来是想用 openwrt 的，功能更强大，但是也更加折腾，变砖的风险也更高。
+我看 shellclash 更新的很勤快，如果能解决我的问题的话，用 shellclash 也不错。
+我顺便查了一下二手价格，大概还在 200 大几十块钱，我是 2022 年底 370 多购买的，3年多了还有近 80% 这么高的二手价，
+说明这款路由器还是挺受欢迎的。
+
+<Image src={ax6000Xianyu} alt="AX6000 二手价" width={400} />
+
+刷入 shellclash 的步骤主要两步， 一打开 ssh，二刷入 shellclash 脚本。
+可以参考 shellclash 的官方文档， 也可以参考一些博主的视频，如 b 站的这个 [年度最值得买路由器？红米AX6000保姆级刷机教程](https://www.bilibili.com/video/BV1sy4y1R7QB)
+
+## 解锁和固化 ssh
+
+电脑先连上 AX6000（网线、WiFi 均可），并登录 192.168.31.1
+
+登陆成功后在网址栏可以看见 token，即加粗部分示例：
+`192.168.31.1/cgi-bin/luci/;stok=`**60522452fadf088a65c6bf93645282a1**`/web/home#router`
+
+将下方的 `{token}` 替换为自己的 token 即可。
+
+### 开启 TELNET
+
+1. 开启开发/调试模式（此模式下允许修改 Bdata）
+
+```
+http://192.168.31.1/cgi-bin/luci/;stok={token}/api/misystem/set_sys_time?timezone=%20%27%20%3B%20zz%3D%24%28dd%20if%3D%2Fdev%2Fzero%20bs%3D1%20count%3D2%202%3E%2Fdev%2Fnull%29%20%3B%20printf%20%27%A5%5A%25c%25c%27%20%24zz%20%24zz%20%7C%20mtd%20write%20-%20crash%20%3B%20
+```
+
+2. 重启
+
+```
+http://192.168.31.1/cgi-bin/luci/;stok={token}/api/misystem/set_sys_time?timezone=%20%27%20%3b%20reboot%20%3b%20
+```
+
+3. 设置 Bdata 永久开启 telnet
+
+```
+http://192.168.31.1/cgi-bin/luci/;stok={token}/api/misystem/set_sys_time?timezone=%20%27%20%3B%20bdata%20set%20telnet_en%3D1%20%3B%20bdata%20set%20ssh_en%3D1%20%3B%20bdata%20set%20uart_en%3D1%20%3B%20bdata%20commit%20%3B%20
+```
+
+4. 重启
+
+```
+http://192.168.31.1/cgi-bin/luci/;stok={token}/api/misystem/set_sys_time?timezone=%20%27%20%3b%20reboot%20%3b%20
+```
+
+### 开启 SSH
+
+连上 telnet 后运行下列命令：
+
+1. 修改 root 密码为 admin（不修改也可以通过 SN 计算默认密码）
+
+```bash
+echo -e 'admin\nadmin' | passwd root
+```
+
+2. 固化 SSH
+
+```bash
+nvram set ssh_en=1
+nvram set telnet_en=1
+nvram set uart_en=1
+nvram set boot_wait=on
+nvram commit
+```
+
+3. 永久开启 SSH（重启不会关闭）：
+
+```bash
+mkdir /data/auto_ssh && cd /data/auto_ssh
+curl -O https://cdn.jsdelivr.net/gh/lemoeo/AX6S@main/auto_ssh.sh
+chmod +x auto_ssh.sh
+uci set firewall.auto_ssh=include
+uci set firewall.auto_ssh.type='script'
+uci set firewall.auto_ssh.path='/data/auto_ssh/auto_ssh.sh'
+uci set firewall.auto_ssh.enabled='1'
+uci commit firewall
+```
+
+4. 关闭开发/调试模式
+
+```bash
+mtd erase crash
+```
+
+5. 重启
+
+```bash
+reboot
+```
+
+## 刷入 shellclash
+
+开启 ssh 后，就可以通过 ssh 登录路由器了，用户名 root，密码是上面设置的 admin。
+然后按照 shellclash 的文档进行安装即可：
+
+```bash
+export url='https://gh.jwsc.eu.org/dev' && sh -c "$(curl -kfsSl $url/install_en.sh)" && . /etc/profile &> /dev/null
+```
+
+<Image src={shellclashCmd} alt="shellclash cmd" width={400} />
+
+但不幸的是，我的路由器刷入 shellclash 后，还是经常重启，看来我的这台机器可能有问题，难道是硬盘坏道之类的？
+我不死心，又从官网的英文文档复制了一遍安装命令，结果居然就好了，
+好像我之前都是从中文文档复制的，然后一直选的是 `老旧设备使用低版本 wget 安装`，
+我也没有具体去分析原因了，很多开源项目的中文文档都不是很及时更新，可能有些细节和最新版本不匹配。
+
+安装好后，配置 clash 的配置文件，就可以愉快的使用了。
+
+<Image src={shellclashDashboard} alt="shellclash dashboard" width={800} />
+
+最后，分享两个不错的路由器垂类网站：
+
+https://www.acwifi.net/
+
+https://mao.fan/
